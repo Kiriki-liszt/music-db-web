@@ -240,6 +240,7 @@ img {
     display: block;
     background-color: antiquewhite;
     height: var(--vh);
+    position: fixed;
 }
 .left-head {
     display: flex;
