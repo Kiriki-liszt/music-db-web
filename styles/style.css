@@ -246,10 +246,11 @@ img {
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: var(--chakra-sizes-20);
     margin-inline-start: var(--chakra-space-8);
     margin-inline-end: var(--chakra-space-8);
+    margin-top: var(--chakra-space-8);
 }
 
 
