@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Shiningstar';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --main-bg-color: #E4E3E3;
     --primary-color: #fed136;
@@ -11,31 +36,6 @@
 }
 
 
-@font-face {
-  font-family: 'RIDIBatang';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Cafe24Shiningstar';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -46,10 +46,11 @@ p {
 
 a {
   color: var(--primary-color);
-  &:hover {
-    color: darken(var(--primary-color), 10%);
-  }
 }
+a:hover {
+    color: darken(var(--primary-color), 10%);
+}
+
 
 .text-primary {
   color: var(--primary-color) !important;
@@ -88,7 +89,6 @@ h1 {
     margin: 0;
     padding: 20px 0;
     color: var(--primary-color);
-    text-shadow: 3px 3px 1px black;
 }
 
 p, li {
