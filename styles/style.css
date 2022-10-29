@@ -236,7 +236,7 @@ img {
 
 
 .left {
-    width: var(--chakra-sizes-60);
+    width: var(--chakra-sizes-80);
     display: block;
     background-color: antiquewhite;
     height: var(--vh);
@@ -255,7 +255,7 @@ img {
 
 
 .music-list {
-    margin-left: var(--chakra-space-60);
+    margin-left: var(--chakra-space-80);
     padding: var(--chakra-space-4);
     display: flex; 
     flex-flow: row wrap; 
