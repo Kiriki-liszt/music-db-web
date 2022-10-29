@@ -1,23 +1,93 @@
+:root {
+    --main-bg-color: #E4E3E3;
+    --primary-color: #fed136;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --font-sans: "'Pretendard-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+    --font-serif: "'RIDIBatang', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+    --font-script: "'Cafe24Shiningstar', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+    --font-heading: "'GmarketSansMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+    
+}
+
+
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24Shiningstar';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: var(--primary-color);
+  &:hover {
+    color: darken(var(--primary-color), 10%);
+  }
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+
+
+
 html {
-    font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #00539F;
+    font-size: 12px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
+    font-family: var(--font-sans);
+    background-color: var(--main-bg-color);
 }
 
 body {
     /*width: 600px;*/
     margin: 0 auto;
-    background-color: #FF9500;
+    background-color: #E4E3E3;
     padding: 0 20px 20px 20px;
     border: 5px solid black;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
     margin: 0;
     padding: 20px 0;
-    color: #00539F;
+    color: var(--primary-color);
     text-shadow: 3px 3px 1px black;
 }
 
