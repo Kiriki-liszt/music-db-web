@@ -130,14 +130,16 @@
                 var myH2 = document.createElement('h2');
                 var myPara1 = document.createElement('p');
                 var myPara2 = document.createElement('p');
+                var myPara3 = document.createElement('p');
 
                 myH2.textContent = musiclist[i][0]
                 myPara1.textContent = musiclist[i][1];
-                myPara2.textContent = musiclist[i][2] + '<br/>';
+                myPara2.textContent = musiclist[i][2];
 
                 myArticle.appendChild(myH2);
                 myArticle.appendChild(myPara1);
                 myArticle.appendChild(myPara2);
+                myArticle.appendChild(myPara3);
 
                 section.appendChild(myArticle);
             }
