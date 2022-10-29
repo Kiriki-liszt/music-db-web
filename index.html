@@ -6,155 +6,95 @@
         <meta charset="utf-8">
         <title>My test page</title>
         <link href="styles/style.css" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
+        <div class="left">
+            <div class="left-head">
+                <h1>
+                    노래책개론
+                </h1>
+            </div>
+        </div>
 
         <header>
         </header>
         
         <section>
         </section>
-        
+       
 
-        <h1>
-            My main title
-        </h1>
+        <!-- <script src="scripts/main.js"></script> -->
+        <script type="text/javascript">
+            var header  = document.querySelector('header');
+            var section = document.querySelector('section');
 
-        <h2>
-            My top level heading
-        </h2>
+            let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
+            var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'text';
+            request.send();
 
-        <h3>
-            My subheading
-        </h3>
+            request.onload = function() {
+                var musicbookText = request.response.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
+                if (musicbookText && musicbookText.length == 2) {
+                    const obj = JSON.parse(musicbookText[1]);
+                    const table = obj.table;
+                    const header = table.cols.map(({label}) => label);
+                    const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
 
-        <h4>
-            My sub-subheading
-        </h4>
-        
+                    console.log(obj);
+                    console.log(table);
+                    console.log(rows);
+                }
+                var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+                console.log(musicbook);
+                populateHeader(musicbook);
+                populateSection(musicbook);
+            }
 
-        <p>
-            내 고양이는 <strong>아주</strong> 고약해.
-        </p>
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = "";
+                header.appendChild(myH1);           // html의 header에다가 myH1을 추가한다.
+            }
 
-        <p id="my-id">
-            아이디는 하나만 가능
-        </p>
+            function populateSection(jsonObj) {
+                section.classList.add("music-list");
+                var musiclist = jsonObj;
 
-        <p class="my-class">
-            클래스는 여러개 가능
-        </p>
+                for (var i = 1; i < musiclist.length; i++) {
+                    var myDiv = document.createElement('div');
 
-        <p>a는 연결을 하는 것</p>
-        <p>herf는 어떠한 주소로 보내는 것</p>
+                    var coverDiv = document.createElement('div');
+                    var coverImg = document.createElement('img');
 
-        <p class="my-class">
-            클래스는 여러ㅈ개 가능
-        </p>
+                    var infoDiv = document.createElement('div');
+                    var infoSong = document.createElement('h2');
+                    var infoSinger = document.createElement('p');
 
-        <img src="https://panels.twitch.tv/panel-666973030-image-1c9e4a69-a54a-4a95-a07d-1a113ec0a0d1" alt="My test image" width="100px">
+                    myDiv.classList.add("song-div");
+                    
+                    coverDiv.classList.add("album-cover-div");
+                    coverImg.classList.add("album-cover-img");
+                    coverImg.src = musiclist[i][3];
+    
+                    infoDiv.classList.add("info-div");
+                    infoSinger.classList.add("singer-name");
+                    infoSong.classList.add("song-name");
+                    infoSinger.textContent = musiclist[i][0];
+                    infoSong.textContent = musiclist[i][1];
 
-        <a href="https://www.twitch.tv/thumper2_/about">
-            하이퍼링크!
-        </a>
+                    coverDiv.appendChild(coverImg);
+                    infoDiv.appendChild(infoSong);
+                    infoDiv.appendChild(infoSinger);
+                    myDiv.appendChild(coverDiv);
+                    myDiv.appendChild(infoDiv);
 
-        <p>At Mozilla, we’re a global community of</p>
-
-        <ol>
-            <li>technologists</li>
-            <li>thinkers</li>
-            <li>builders</li>
-        </ol>
-
-        <ul>
-            <li>technologists</li>
-            <li>thinkers</li>
-            <li>builders</li>
-        </ul>
-
-        <p>working together ... </p>
-
-        <p>
-            Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> 
-            to learn even more about the values and principles that guide the pursuit of our mission.
-        </p>
+                    section.appendChild(myDiv);
+                }
+            }
+        </script>   
     </body>
-    <button>Change user</button>
-
-    <!-- <script src="scripts/main.js"></script> -->
-    <script type="text/javascript">
-        var header  = document.querySelector('header');
-        var section = document.querySelector('section');
-
-        let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
-        var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
-        var request = new XMLHttpRequest();
-        request.open('GET', requestURL);
-        request.responseType = 'text';
-        request.send();
-
-        request.onload = function() {
-            var musicbookText = request.response.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
-            if (musicbookText && musicbookText.length == 2) {
-                const obj = JSON.parse(musicbookText[1]);
-                const table = obj.table;
-                const header = table.cols.map(({label}) => label);
-                const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
-
-                console.log(obj);
-                console.log(table);
-                console.log(rows);
-            }
-            var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-            console.log(musicbook);
-            populateHeader(musicbook);
-            populateSection(musicbook);
-        }
-
-        function populateHeader(jsonObj) {
-            var myH1 = document.createElement('h1');
-            myH1.textContent = jsonObj[0];
-            header.appendChild(myH1);           // html의 header에다가 myH1을 추가한다.
-        }
-
-        function populateSection(jsonObj) {
-            section.classList.add("music-list");
-            var musiclist = jsonObj;
-
-            for (var i = 1; i < musiclist.length; i++) {
-                var myDiv = document.createElement('div');
-
-                var coverDiv = document.createElement('div');
-                var coverImg = document.createElement('img');
-
-                var infoDiv = document.createElement('div');
-                var infoSong = document.createElement('h2');
-                var infoSinger = document.createElement('p');
-
-                myDiv.classList.add("song-div");
-                
-                coverDiv.classList.add("album-cover-div");
-                coverImg.classList.add("album-cover-img");
-                coverImg.src = musiclist[i][3];
- 
-                infoDiv.classList.add("info-div");
-                infoSinger.classList.add("singer-name");
-                infoSong.classList.add("song-name");
-                infoSinger.textContent = musiclist[i][0];
-                infoSong.textContent = musiclist[i][1];
-
-                coverDiv.appendChild(coverImg);
-                infoDiv.appendChild(infoSong);
-                infoDiv.appendChild(infoSinger);
-                myDiv.appendChild(coverDiv);
-                myDiv.appendChild(infoDiv);
-
-                section.appendChild(myDiv);
-            }
-        }
-
-    </script>   
-
 </html> 
