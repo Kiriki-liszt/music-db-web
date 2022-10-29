@@ -138,9 +138,9 @@
                 myDiv.style.margin = "5px";
 
                 coverDiv.class = "album-cover";
-                coverDiv.style = '"' + "position: relative;" + '"';
+                coverDiv.style = "position: relative; width: 150px; height: 150px;";
                 coverImg.src = musiclist[i][3];
-                coverImg.style = "overflow: hidden; position: relative; inset: 0px; display: flex; WebkitBoxPack: center; justifyContent: center; WebkitBoxAlign: center; alignItems: center; width: 100%; height: 100%; border-radius: 7px;";
+                coverImg.style = "overflow: hidden; position: relative; inset: 0px; display: flex; WebkitBoxPack: center; justifyContent: center; WebkitBoxAlign: center; alignItems: center; width: 100%; height: 100%; border-radius: 7px; object-fit: cover;";
 
                 infoDiv.class = "song-info";
                 infoSinger.textContent = musiclist[i][0];
