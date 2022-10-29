@@ -115,7 +115,7 @@
 
         function populateHeader(jsonObj) {
             var myH1 = document.createElement('h1');
-            myH1.textContent = jsonObj[0][0];
+            myH1.textContent = jsonObj[0];
             header.appendChild(myH1);           // html의 header에다가 myH1을 추가한다.
 
             var myPara = document.createElement('p');
@@ -123,18 +123,21 @@
             header.appendChild(myPara);
         }
 
-        function showHeroes(jsonObj) {
+        function populateSection(jsonObj) {
             var musiclist = jsonObj;
-            for (var i = 0; i < musiclist.length; i++) {
+            for (var i = 1; i < musiclist.length; i++) {
                 var myArticle = document.createElement('article');
                 var myH2 = document.createElement('h2');
                 var myPara1 = document.createElement('p');
+                var myPara2 = document.createElement('p');
 
                 myH2.textContent = musiclist[i][0]
-                myPara1.textContent = 'Secret identity: ' + musiclist[i][1];
+                myPara1.textContent = musiclist[i][1];
+                myPara2.textContent = musiclist[i][2] + '<br/>';
 
                 myArticle.appendChild(myH2);
                 myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara2);
 
                 section.appendChild(myArticle);
             }
