@@ -96,7 +96,7 @@
                     console.log(header);
                     console.log(rows);
                 }
-                var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+                var musicbook = JSON.parse(musicbookText[1]).table.rows[1].map(({c}) => c.map(e => e ? (e.v || "") : ""));
                 console.log(musicbook);
                 populateHeader(musicbook);
                 showHeroes(musicbook);
