@@ -206,6 +206,7 @@ img {
 .left {
     width: var(--chakra-sizes-60);
     display: block;
+    background-color: antiquewhite;
 }
 
 
