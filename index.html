@@ -117,36 +117,38 @@
             var myH1 = document.createElement('h1');
             myH1.textContent = jsonObj[0];
             header.appendChild(myH1);           // html의 header에다가 myH1을 추가한다.
-
-            var myPara = document.createElement('p');
-            myPara.textContent = jsonObj[0][1];
-            header.appendChild(myPara);
         }
 
         function populateSection(jsonObj) {
             var musiclist = jsonObj;
             for (var i = 1; i < musiclist.length; i++) {
                 var myDiv = document.createElement('div');
-                var myH2 = document.createElement('h2');
-                var myPara1 = document.createElement('p');
-                var myPara2 = document.createElement('p');
-                var myPara3 = document.createElement('img');
-                var myPara4 = document.createElement('br');
+
+                var coverDiv = document.createElement('div');
+                var coverImg = document.createElement('img');
+
+                var infoDiv = document.createElement('div');
+                var infoSong = document.createElement('h2');
+                var infoSinger = document.createElement('p');
+
 
                 myDiv.style.width = "150px";
-                myDiv.style.height = "150px";
+                myDiv.style.height = "215px";
 
-                myH2.textContent = musiclist[i][0]
-                myPara1.textContent = musiclist[i][1];
-                myPara2.textContent = musiclist[i][2];
-                myPara3.style.src = '"' + musiclist[i][3] + '"';
-                myPara3.style = '"' + "overflow: hidden; position: absolute; inset: 0px; display: flex; WebkitBoxPack: center; justifyContent: center; WebkitBoxAlign: center; alignItems: center; width: 100%; height: 100%;" + '"';
+                coverDiv.class = "album-cover";
+                coverDiv.style = '"' + "position: relative;" + '"';
+                coverImg.src = '"' + musiclist[i][3] + '"';
+                coverImg.style = '"' + "overflow: hidden; position: absolute; inset: 0px; display: flex; WebkitBoxPack: center; justifyContent: center; WebkitBoxAlign: center; alignItems: center; width: 100%; height: 100%;" + '"';
 
-                myDiv.appendChild(myH2);
-                myDiv.appendChild(myPara1);
-                myDiv.appendChild(myPara2);
-                myDiv.appendChild(myPara3);
-                myDiv.appendChild(myPara4);
+                infoDiv.class = "song-info";
+                infoSinger.textContent = musiclist[i][0];
+                infoSinger.textContent = musiclist[i][1];
+
+                coverDiv.appendChild(coverImg);
+                infoDiv.appendChild(infoSong);
+                infoDiv.appendChild(infoSinger);
+                myDiv.appendChild(coverDiv);
+                myDiv.appendChild(infoDiv);
 
                 section.appendChild(myDiv);
             }
