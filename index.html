@@ -11,6 +11,13 @@
 
     <body>
 
+        <header>
+        </header>
+        
+        <section>
+        </section>
+        
+
         <h1>
             My main title
         </h1>
@@ -78,39 +85,76 @@
 
     <!-- <script src="scripts/main.js"></script> -->
     <script type="text/javascript">
-            let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
-            var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
-            var request = new XMLHttpRequest();
-            request.open('GET', requestURL);
-            request.responseType = 'text';
-            request.send();
+        var header  = document.querySelector('header');
+        var section = document.querySelector('section');
 
-            request.onload = function() {
-                var musicbookText = request.response.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
-                if (musicbookText && musicbookText.length == 2) {
-                    const obj = JSON.parse(musicbookText[1]);
-                    const table = obj.table;
-                    const header = table.cols.map(({label}) => label);
-                    const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
+        let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
+        var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'text';
+        request.send();
 
-                    console.log(header);
-                    console.log(rows);
+        request.onload = function() {
+            var musicbookText = request.response.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
+            if (musicbookText && musicbookText.length == 2) {
+                const obj = JSON.parse(musicbookText[1]);
+                const table = obj.table;
+                const header = table.cols.map(({label}) => label);
+                const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
+
+                console.log(header);
+                console.log(rows);
+            }
+            var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+            console.log(musicbook);
+            populateHeader(musicbook);
+            showHeroes(musicbook);
+        }
+
+        function populateHeader(jsonObj) {
+            var myH1 = document.createElement('h1');
+            myH1.textContent = jsonObj[0];
+            header.appendChild(myH1);           // html의 header에다가 myH1을 추가한다.
+
+            var myPara = document.createElement('p');
+            myPara.textContent = jsonObj[1];
+            header.appendChild(myPara);
+        }
+
+        function showHeroes(jsonObj) {
+            var heroes = jsonObj;
+            for (var i = 0; i < heroes.length; i++) {
+                var myArticle = document.createElement('article');
+                var myH2 = document.createElement('h2');
+                var myPara1 = document.createElement('p');
+                var myPara2 = document.createElement('p');
+                var myPara3 = document.createElement('p');
+                var myList = document.createElement('ul');
+
+                myH2.textContent = heroes[i].name;
+                myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
+                myPara2.textContent = 'Age: ' + heroes[i].age;
+                myPara3.textContent = 'Superpowers:';
+
+                var superPowers = heroes[i].powers;
+                    for (var j = 0; j < superPowers.length; j++) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = superPowers[j];
+                    myList.appendChild(listItem);
                 }
-                var musicbook = JSON.parse(musicbookText[1]).table.rows[1].map(({c}) => c.map(e => e ? (e.v || "") : ""));
-                console.log(musicbook);
-                populateHeader(musicbook);
-                showHeroes(musicbook);
-            }
 
-            function populateHeader(jsonObj) {
-                var myH1 = document.createElement('h1');
-                myH1.textContent = jsonObj[0];
-                header.appendChild(myH1);
+                myArticle.appendChild(myH2);
+                myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara2);
+                myArticle.appendChild(myPara3);
+                myArticle.appendChild(myList);
 
-                var myPara = document.createElement('p');
-                myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-                header.appendChild(myPara);
+                section.appendChild(myArticle);
             }
-        </script>   
+        }
+
+
+    </script>   
 
 </html> 
