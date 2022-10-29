@@ -75,6 +75,40 @@
         </p>
     </body>
     <button>Change user</button>
-    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
+    <script type="text/javascript">
+            let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
+            var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'text';
+            request.send();
+
+            request.onload = function() {
+                var musicbookText = request.response.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
+                if (musicbookText && musicbookText.length == 2) {
+                    const obj = JSON.parse(musicbookText[1]);
+                    const table = obj.table;
+                    const header = table.cols.map(({label}) => label);
+                    const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
+
+                    console.log(header);
+                    console.log(rows);
+                }
+                var musicbook = obj;
+                populateHeader(musicbook);
+                showHeroes(musicbook);
+            }
+
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+
+                var myPara = document.createElement('p');
+                myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+                header.appendChild(myPara);
+            }
+        </script>   
 
 </html> 
