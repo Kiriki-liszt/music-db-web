@@ -211,6 +211,7 @@ img {
 
 
 .music-list {
+    margin-left: var(--chakra-space-60);
     display: flex; 
     flex-flow: row wrap; 
     -webkit-box-pack: center; 
