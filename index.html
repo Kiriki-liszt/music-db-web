@@ -126,25 +126,30 @@
         function populateSection(jsonObj) {
             var musiclist = jsonObj;
             for (var i = 1; i < musiclist.length; i++) {
-                var myArticle = document.createElement('article');
+                var myDiv = document.createElement('div');
                 var myH2 = document.createElement('h2');
                 var myPara1 = document.createElement('p');
                 var myPara2 = document.createElement('p');
-                var myPara3 = document.createElement('p');
+                var myPara3 = document.createElement('img');
+                var myPara4 = document.createElement("<br/>");
+
+                myDiv.style.width = "150px";
+                myDiv.style.height = "150px";
 
                 myH2.textContent = musiclist[i][0]
                 myPara1.textContent = musiclist[i][1];
                 myPara2.textContent = musiclist[i][2];
+                myPara3.style.src = musiclist[i][3];
 
-                myArticle.appendChild(myH2);
-                myArticle.appendChild(myPara1);
-                myArticle.appendChild(myPara2);
-                myArticle.appendChild(myPara3);
+                myDiv.appendChild(myH2);
+                myDiv.appendChild(myPara1);
+                myDiv.appendChild(myPara2);
+                myDiv.appendChild(myPara3);
+                myDiv.appendChild(myPara4);
 
-                section.appendChild(myArticle);
+                section.appendChild(myDiv);
             }
         }
-
 
     </script>   
 
