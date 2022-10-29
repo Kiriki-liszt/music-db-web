@@ -253,6 +253,10 @@ img {
     margin-inline-end: var(--chakra-space-8);
     margin-top: var(--chakra-space-8);
 }
+.left-text {
+    margin-inline-start: var(--chakra-space-8);
+    margin-inline-end: var(--chakra-space-8);
+}
 
 
 
