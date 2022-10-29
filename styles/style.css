@@ -207,6 +207,7 @@ html {
     font-size: 12px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
     font-family: var(--font-sans);
     background-color: var(--main-bg-color);
+    --vh: 722px;
 }
 
 body {
@@ -240,7 +241,7 @@ img {
     width: var(--chakra-sizes-60);
     display: block;
     background-color: antiquewhite;
-    height: var(--chakra-sizes-full);
+    height: var(--vh);
 }
 .left-head {
     display: flex;
