@@ -76,33 +76,6 @@
     </body>
     <button>Change user</button>
 
-
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-    google.charts.load('current', { packages: ['corechart'] }).then(function () {
-      var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ&pub=1');
-      query.send(function (response) {            
-      var dataTable = response.getDataTable();
-      var jsonData = dataTable.toJSON();            
-      jsonData = JSON.parse(jsonData);
-  
-      for(var i=0; i < jsonData.rows.length; i++) {
-        var htmlData = "";
-        htmlData += "<li>" + jsonData.rows[i].c[0].v + "</li>";
-        $(".list ul").append(htmlData);  // 데이터를 뿌려준다
-        console.log(jsonData.rows[i].c[0].v);          
-      }
-      });
-    });
-    </script>
-  
-    <div class="list">
-      <ul>
-      <!-- 데이터 리스트 -->
-      </ul>
-    </div>
-
-
     <!-- <script src="scripts/main.js"></script> -->
     <script type="text/javascript">
             let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
@@ -124,13 +97,14 @@
                     console.log(rows);
                 }
                 var musicbook = JSON.parse(musicbookText[1]);
+                console.log(musicbook);
                 populateHeader(musicbook);
                 showHeroes(musicbook);
             }
 
             function populateHeader(jsonObj) {
                 var myH1 = document.createElement('h1');
-                myH1.textContent = jsonObj['squadName'];
+                myH1.textContent = jsonObj[0];
                 header.appendChild(myH1);
 
                 var myPara = document.createElement('p');
