@@ -120,8 +120,7 @@
         }
 
         function populateSection(jsonObj) {
-            section.class = "music-list";
-
+            section.classList.add("music-list");
             var musiclist = jsonObj;
 
             for (var i = 1; i < musiclist.length; i++) {
@@ -134,15 +133,15 @@
                 var infoSong = document.createElement('h2');
                 var infoSinger = document.createElement('p');
 
-                myDiv.class = "song-div";
+                myDiv.classList.add("song-div");
                 
-                coverDiv.class = "album-cover-div";
-                coverImg.class = "album-cover-img";
+                coverDiv.classList.add("album-cover-div");
+                coverImg.classList.add("album-cover-img");
                 coverImg.src = musiclist[i][3];
  
-                infoDiv.class = "info-div";
-                infoSinger.class="singer-name";
-                infoSong.class="song-name";
+                infoDiv.classList.add("info-div");
+                infoSinger.classList.add("singer-name");
+                infoSong.classList.add("song-name");
                 infoSinger.textContent = musiclist[i][0];
                 infoSong.textContent = musiclist[i][1];
 
