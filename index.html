@@ -110,7 +110,7 @@
             var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
             console.log(musicbook);
             populateHeader(musicbook);
-            showHeroes(musicbook);
+            populateSection(musicbook);
         }
 
         function populateHeader(jsonObj) {
