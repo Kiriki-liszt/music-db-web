@@ -240,6 +240,7 @@ img {
     width: var(--chakra-sizes-60);
     display: block;
     background-color: antiquewhite;
+    margin: auto;
 }
 
 
