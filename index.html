@@ -103,7 +103,8 @@
                 const header = table.cols.map(({label}) => label);
                 const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
 
-                console.log(header);
+                console.log(obj);
+                console.log(table);
                 console.log(rows);
             }
             var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
@@ -123,14 +124,14 @@
         }
 
         function showHeroes(jsonObj) {
-            var heroes = jsonObj;
-            for (var i = 0; i < heroes.length; i++) {
+            var musiclist = jsonObj;
+            for (var i = 0; i < musiclist.length; i++) {
                 var myArticle = document.createElement('article');
                 var myH2 = document.createElement('h2');
                 var myPara1 = document.createElement('p');
 
-                myH2.textContent = heroes[i][0]
-                myPara1.textContent = 'Secret identity: ' + heroes[i][1];
+                myH2.textContent = musiclist[i][0]
+                myPara1.textContent = 'Secret identity: ' + musiclist[i][1];
 
                 myArticle.appendChild(myH2);
                 myArticle.appendChild(myPara1);
