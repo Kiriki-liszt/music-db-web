@@ -31,11 +31,11 @@ function populateSection(jsonObj) {
     section.id = "musicList";
     var musiclist = jsonObj;
     const search_value = document.getElementById("inputsearch").value;
-
+    console.log(search_value);
 
     for (var i = 1; i < musiclist.length; i++) {
         if ( search_value != "" ) {
-            if ( musiclist[i][0].indexOf(search_value) || musiclist[i][1].indexOf(search_value) ) {
+            if ( musiclist[i][0].indexOf(search_value)==-1 && musiclist[i][1].indexOf(search_value)==-1 ) {
                 continue; 
             }
         }
