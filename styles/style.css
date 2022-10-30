@@ -379,8 +379,8 @@ button, input, optgroup, select, textarea {
 }
 .album-cover-div {
     position: relative; 
-    width: 150px; 
-    height: 150px;
+    width: 140px; 
+    height: 140px;
     margin-bottom: 5px;
 }
 .album-cover-img {
