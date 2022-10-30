@@ -351,7 +351,11 @@ button, input, optgroup, select, textarea {
     font-size: var(--chakra-fontSizes-lg);
     padding-inline-start: var(--chakra-space-3);
     padding-inline-end: var(--chakra-space-3);
-    color: var(--chakra-colors-teal-600);
+    color: #2C7A7B;
+    background: var(--chakra-colors-transparent);
+}
+.button-selected {
+    color: #6B46C1;
     background: var(--chakra-colors-transparent);
 }
 .left-text {

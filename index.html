@@ -19,14 +19,20 @@
             search_update.setAttribute("value", search_update.value);
         }
         function sortSinger() {
+            document.getElementsByClassName("button-selected").classList.remove("button-selected");
+            document.getElementById("bySinger").classList.add("button-selected");
             musicbook = singerOrdered;
             populateSection(musicbook, 1);
         }
         function sortSong() {
+            document.getElementsByClassName("button-selected").classList.remove("button-selected");
+            document.getElementById("bySong").classList.add("button-selected");
             musicbook = songOrdered;
             populateSection(musicbook, 1);
         }
         function sortAdded() {
+            document.getElementsByClassName("button-selected").classList.remove("button-selected");
+            document.getElementById("byAdd").classList.add("button-selected");
             musicbook = unOrdered;
             populateSection(musicbook, 1);
         }
@@ -54,15 +60,15 @@
                 </div>
 
                 <div class="left-buttons">
-                    <button onclick="sortSinger();" type="button" class="sort-button">
+                    <button onclick="sortSinger();" type="button" class="sort-button" id="bySinger">
                         가수명순&nbsp;
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                     </button>
-                    <button onclick="sortSong();"type="button" class="sort-button">
+                    <button onclick="sortSong();"type="button" class="sort-button" id="bySong">
                         곡명순&nbsp;
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                     </button>
-                    <button onclick="sortAdded();"type="button" class="sort-button">
+                    <button onclick="sortAdded();"type="button" class="sort-button button-selected" id="byAdd">
                         등록순&nbsp;
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                     </button>
