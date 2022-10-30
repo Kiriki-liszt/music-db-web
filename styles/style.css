@@ -401,7 +401,6 @@ button, input, optgroup, select, textarea {
     width: 10%;
     min-width: 150px;
     max-width: 200px;
-    border-width: 1px;
     box-shadow: var(--chakra-shadows-sm);
     margin: var(--chakra-space-1);
     border-radius: var( --chakra-radii-lg);
@@ -452,6 +451,7 @@ button, input, optgroup, select, textarea {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: auto;
 }
 
 @media screen and (min-width: 48em) {
