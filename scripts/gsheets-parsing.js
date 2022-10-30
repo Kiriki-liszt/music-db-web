@@ -79,6 +79,7 @@ function populateSection(jsonObj, direction) {
 
         var infoDiv = document.createElement('div');
         var infoSong = document.createElement('h2');
+        var songText = document.createElement('span');
         var infoSinger = document.createElement('p');
 
         myDiv.classList.add("song-div");
@@ -91,10 +92,10 @@ function populateSection(jsonObj, direction) {
         infoSinger.classList.add("singer-name");
         infoSong.classList.add("song-name");
         infoSinger.textContent = musiclist[i][0];
-        infoSong.textContent = musiclist[i][1];
+        songText.textContent = musiclist[i][1];
 
         coverDiv.appendChild(coverImg);
-        infoDiv.appendChild(infoSong);
+        infoDiv.appendChild(infoSong.appendChild(songText));
         infoDiv.appendChild(infoSinger);
         myDiv.appendChild(document.createElement('div').appendChild(coverDiv));
         myDiv.appendChild(infoDiv);
