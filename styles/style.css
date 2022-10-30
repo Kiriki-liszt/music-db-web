@@ -430,10 +430,10 @@ button, input, optgroup, select, textarea {
 .song-div {
     background: whitesmoke; 
     width: 12%;
-    min-width: 100px;
+    min-width: 110px;
     max-width: 200px;
     box-shadow: var(--chakra-shadows-sm);
-    margin: var(--chakra-space-1-5);
+    margin: var(--chakra-space-2);
     border-radius: var( --chakra-radii-lg);
 }
 .album-cover-div {
@@ -486,7 +486,7 @@ button, input, optgroup, select, textarea {
     white-space: nowrap;
     margin: auto;
 }
-
+/* desktop */
 @media screen and (min-width: 48em) {
     html {
         font-size: 12px;
@@ -503,6 +503,7 @@ button, input, optgroup, select, textarea {
     }
     .song-div {
         min-width: 150px;
+        margin: var(--chakra-space-1-5);
     }
     .music-list {
         margin-left: var(--chakra-space-80);
