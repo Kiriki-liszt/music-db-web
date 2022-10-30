@@ -6,45 +6,6 @@
         <title>My test page</title>
         <link href="styles/style.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>    
-        
-        <script type="text/javascript">
-
-        function searchEnter() {
-            if (window.event.keyCode==13) {               
-                populateSection(musicbook);
-            }
-        }
-        function searchUpdate() {
-            const search_update = document.getElementById("inputsearch");
-            search_update.setAttribute("value", search_update.value);
-        }
-        function sortSinger() {
-            var element = document.getElementsByClassName("button-selected");
-            element.classList.remove("button-selected");
-            element = document.getElementById("bySinger");
-            element.classList.add("button-selected");
-            musicbook = singerOrdered;
-            populateSection(musicbook, 1);
-        }
-        function sortSong() {
-            var element = document.getElementsByClassName("button-selected");
-            element.classList.remove("button-selected");
-            element = document.getElementById("bySong");
-            element.classList.add("button-selected");
-            musicbook = songOrdered;
-            populateSection(musicbook, 1);
-        }
-        function sortAdded() {
-            var element = document.getElementsByClassName("button-selected");
-            element.classList.remove("button-selected");
-            element = document.getElementById("byAdd");
-            element.classList.add("button-selected");
-            musicbook = unOrdered;
-            populateSection(musicbook, 1);
-        }
-        
-        </script>
-
     </head>
 
     <body>
@@ -98,6 +59,43 @@
             </section>
 
             <script src="scripts/gsheets-parsing.js"></script>
+            <script type="text/javascript">
+
+                function searchEnter() {
+                    if (window.event.keyCode==13) {               
+                        populateSection(musicbook);
+                    }
+                }
+                function searchUpdate() {
+                    const search_update = document.getElementById("inputsearch");
+                    search_update.setAttribute("value", search_update.value);
+                }
+                function sortSinger() {
+                    var element = document.getElementsByClassName("button-selected");
+                    element.classList.remove("button-selected");
+                    element = document.getElementById("bySinger");
+                    element.classList.add("button-selected");
+                    musicbook = singerOrdered;
+                    populateSection(musicbook, 1);
+                }
+                function sortSong() {
+                    var element = document.getElementsByClassName("button-selected");
+                    element.classList.remove("button-selected");
+                    element = document.getElementById("bySong");
+                    element.classList.add("button-selected");
+                    musicbook = songOrdered;
+                    populateSection(musicbook, 1);
+                }
+                function sortAdded() {
+                    var element = document.getElementsByClassName("button-selected");
+                    element.classList.remove("button-selected");
+                    element = document.getElementById("byAdd");
+                    element.classList.add("button-selected");
+                    musicbook = unOrdered;
+                    populateSection(musicbook, 1);
+                }
+                
+                </script>
         </div>
     </body>
 </html> 
