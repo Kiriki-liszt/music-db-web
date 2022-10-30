@@ -70,43 +70,26 @@
                     const search_update = document.getElementById("inputsearch");
                     search_update.setAttribute("value", search_update.value);
                 }
+                var sort_selected = "byAdd";
                 function sortSinger() {
-                    var elem_found = document.getElementsByClassName("button-selected");
-                    var elem_id = elem_found.getAttribute("id");
-                    var element = document.getElementById(elem_id);
-                    console.log(elem_found);
-                    console.log(elem_id);
-                    console.log(element);
-                    element.classList.remove("button-selected");
-                    element = document.getElementById("bySinger");
-                    element.classList.add("button-selected");
+                    document.getElementById(sort_selected).classList.remove("button-selected");
+                    document.getElementById("bySinger").classList.add("button-selected");
+                    sort_selected = "bySinger";
                     musicbook = singerOrdered;
                     populateSection(musicbook, 1);
                 }
                 function sortSong() {
-                    var elem_found = document.getElementsByClassName("button-selected");
-                    var elem_id = elem_found.getAttribute("id");
-                    var element = document.getElementById(elem_id);
-                    console.log(elem_found);
-                    console.log(elem_id);
-                    console.log(element);
-                    element.classList.remove("button-selected");
-                    element = document.getElementById("bySong");
-                    element.classList.add("button-selected");
+                    document.getElementById(sort_selected).classList.remove("button-selected");
+                    document.getElementById("bySong").classList.add("button-selected");
+                    sort_selected = "bySong";
                     musicbook = songOrdered;
                     populateSection(musicbook, 1);
                 }
                 function sortAdded() {
-                    var elem_found = document.getElementsByClassName("button-selected");
-                    var elem_id = elem_found.getAttribute("id");
-                    var element = document.getElementById(elem_id);
-                    console.log(elem_found);
-                    console.log(elem_id);
-                    console.log(element);
-                    element.classList.remove("button-selected");
-                    element = document.getElementById("byAdd");
-                    element.classList.add("button-selected");
-                    musicbook = unOrdered;
+                    document.getElementById(sort_selected).classList.remove("button-selected");
+                    document.getElementById("byAdd").classList.add("button-selected");
+                    sort_selected = "byAdd";
+                    musicbook = addOrdered;
                     populateSection(musicbook, 1);
                 }
                 

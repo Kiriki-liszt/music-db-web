@@ -6,7 +6,7 @@ let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시�
 var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
 var request = new XMLHttpRequest();
 var musicbook;
-var unOrdered;
+var addOrdered;
 var singerOrdered;
 var songOrdered;
 request.open('GET', requestURL);
@@ -26,8 +26,8 @@ request.onload = function() {
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
     
-    unOrdered = JSON.parse(JSON.stringify(musicbook));
-    console.log(unOrdered);
+    addOrdered = JSON.parse(JSON.stringify(musicbook));
+    console.log(addOrdered);
 
     musicbook.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
     songOrdered = JSON.parse(JSON.stringify(musicbook));
@@ -37,7 +37,7 @@ request.onload = function() {
     singerOrdered = JSON.parse(JSON.stringify(musicbook));
     console.log(singerOrdered);
 
-    musicbook = unOrdered;
+    musicbook = addOrdered;
     console.log(musicbook);
 
     populateSection(musicbook, 1); 
