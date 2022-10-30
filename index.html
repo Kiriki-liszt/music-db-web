@@ -71,9 +71,9 @@
                     search_update.setAttribute("value", search_update.value);
                 }
                 function sortSinger() {
-                    var element_id = document.getElementsByClassName("button-selected").id;
-                    var element = document.getElementById(element_id);
-                    console.log(element_id);
+                    var element_a = document.getElementsByClassName("button-selected");
+                    var element = document.getElementById(element_a.id);
+                    console.log(element_a.id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("bySinger");
@@ -82,9 +82,9 @@
                     populateSection(musicbook, 1);
                 }
                 function sortSong() {
-                    var element_id = document.getElementsByClassName("button-selected").id;
-                    var element = document.getElementById(element_id);
-                    console.log(element_id);
+                    var element_a = document.getElementsByClassName("button-selected");
+                    var element = document.getElementById(element_a.id);
+                    console.log(element_a.id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("bySong");
@@ -93,9 +93,9 @@
                     populateSection(musicbook, 1);
                 }
                 function sortAdded() {
-                    var element_id = document.getElementsByClassName("button-selected").id;
-                    var element = document.getElementById(element_id);
-                    console.log(element_id);
+                    var element_a = document.getElementsByClassName("button-selected");
+                    var element = document.getElementById(element_a.id);
+                    console.log(element_a.id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("byAdd");
