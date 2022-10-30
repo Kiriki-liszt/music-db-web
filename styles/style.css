@@ -250,7 +250,11 @@ button, input, optgroup, select, textarea {
     line-height: 1.15;
     margin: 0px;
 }
-
+*, ::before, ::after {
+    border-width: 0px;
+    border-style: solid;
+    box-sizing: border-box;
+}
 
 
 .left {
@@ -343,7 +347,7 @@ button, input, optgroup, select, textarea {
     transition-duration: var(--chakra-transition-duration-normal);
     height: var(--chakra-sizes-8);
     min-width: var(--chakra-sizes-8);
-    font-size: var(--chakra-fontSizes-sm);
+    font-size: var(--chakra-fontSizes-lg);
     padding-inline-start: var(--chakra-space-3);
     padding-inline-end: var(--chakra-space-3);
     color: var(--chakra-colors-teal-600);
