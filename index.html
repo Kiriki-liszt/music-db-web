@@ -16,8 +16,10 @@
                 while (myNode.lastElementChild) {
                     myNode.removeChild(myNode.lastElementChild);
                 }
+            }
+            else {
                 const search_update = document.getElementById("inputsearch");
-
+                search_update.setAttribute("value", search_update.value);
             }
         }
         
