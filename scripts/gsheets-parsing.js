@@ -24,18 +24,18 @@ request.onload = function() {
         console.log(table);
         console.log(rows);
     }
-    const ASIS = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-
-    unOrdered = ASIS;
+    musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+    
+    unOrdered = JSON.parse(JSON.stringify(musicbook));
     console.log(unOrdered);
 
-    singerOrdered = ASIS;
-    singerOrdered.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
-    console.log(singerOrdered);
-
-    songOrdered = ASIS;
-    songOrdered.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
+    musicbook.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
+    songOrdered = JSON.parse(JSON.stringify(musicbook));
     console.log(songOrdered);
+
+    musicbook.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
+    singerOrdered = JSON.parse(JSON.stringify(musicbook));
+    console.log(singerOrdered);
 
     musicbook = unOrdered;
     console.log(musicbook);
