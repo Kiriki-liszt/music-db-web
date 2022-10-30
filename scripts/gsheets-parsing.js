@@ -24,7 +24,9 @@ request.onload = function() {
         console.log(table);
         console.log(rows);
     }
-    const ASIS = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+    musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+    musicbook.removeChild(musicbook[0]);
+    const ASIS = musicbook;
 
     unOrdered = ASIS;
     console.log(unOrdered);
