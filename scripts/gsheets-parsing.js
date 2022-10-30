@@ -26,15 +26,8 @@ request.onload = function() {
     console.log(musicbook);
     populateSection(musicbook);
 
-    const sorted = (ob) => {
-        const arr = [];
-        for(let i in ob) {
-          arr.push([i, ob[i]]);
-        }
-        return arr.sorted((a, b) => a[1] - b[1]);
-    }
-    Object.values(musicbook).sort().forEach(function(value) { nameOrdered[value] = musicbook[value];});
-    console.log(sorted);
+    nameOrdered = musicbook;
+    nameOrdered.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
     console.log(nameOrdered);
 }
 
