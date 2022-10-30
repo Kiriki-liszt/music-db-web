@@ -343,7 +343,7 @@ button, input, optgroup, select, textarea {
     position: relative; 
     width: 150px; 
     height: 150px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 .album-cover-img {
     overflow: hidden; 
@@ -351,7 +351,7 @@ button, input, optgroup, select, textarea {
     inset: 0px; 
     display: flex; 
     -webkit-box-pack: center; 
-    justify-content: center; 
+    justify-content: center;
     -webkit-box-align: center; 
     align-items: center; 
     width: 100%; 
