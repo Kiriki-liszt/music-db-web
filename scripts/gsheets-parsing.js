@@ -40,10 +40,10 @@ request.onload = function() {
     musicbook = unOrdered;
     console.log(musicbook);
 
-    populateSection(musicbook); 
+    populateSection(musicbook, 1); 
 }
 
-function populateSection(jsonObj) {
+function populateSection(jsonObj, direction) {
 
     const myNode = document.getElementById("musicList");
     while (myNode.lastElementChild) {
@@ -53,7 +53,17 @@ function populateSection(jsonObj) {
     var musiclist = jsonObj;
     const search_value = document.getElementById("inputsearch").value;
 
-    for (var i = 0; i < musiclist.length; i++) {
+    var i, end;
+    if (direction == 1) {
+        i = 0;
+        end = musiclist.length;
+    }
+    else {
+        i = musiclist.length - 1;
+        end = -1;
+    }
+
+    for (i; i != end; i = i + direction) {
         if ( search_value != "" ) {
             if ( musiclist[i][0].indexOf(search_value)==-1 && musiclist[i][1].indexOf(search_value)==-1 ) {
                 continue; 
