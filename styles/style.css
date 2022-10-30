@@ -395,7 +395,7 @@ button, input, optgroup, select, textarea {
     justify-content: center;
     margin-left: 0px;
     padding: var(--chakra-space-4);
-    border-radius: var(--chakra-radii-base);
+    border-radius: var( --chakra-radii-lg);
 }
 .song-div {
     background: whitesmoke; 
@@ -416,10 +416,10 @@ button, input, optgroup, select, textarea {
     padding-bottom: 100%;
 }
 .album-cover-img {
-    border-radius: var(--chakra-radii-base);
+    border-radius: var( --chakra-radii-lg);
     object-fit: cover;
 }
-.album-cover-img > :not(style) {
+.album-cover-img:not(style) {
     overflow: hidden;
     position: absolute;
     inset: 0px;
