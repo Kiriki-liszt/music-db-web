@@ -5,7 +5,22 @@
         <meta charset="utf-8">
         <title>My test page</title>
         <link href="styles/style.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>    
+        
+        <script type="text/javascript">
+
+        function searchEnter() {
+            if (window.event.keyCode==13) {
+                // 엔터키가 눌렸을 때 실행할 내용
+                const myNode = section.getElementById("music-list");
+                while (myNode.lastElementChild) {
+                    myNode.removeChild(myNode.lastElementChild);
+                }
+            }
+        }
+        
+        </script>
+
     </head>
 
     <body>
@@ -22,7 +37,7 @@
                         <div class="left-search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input type="text" id="inputsearch" onkeydown="searchEnter();" placeholder="Search" class="left-search-text" value="" />
+                        <input type="text" id="inputsearch" onkeydown="searchEnter();" placeholder="Search" class="left-search-text" value="">
                     </div>
                 </div>
 
