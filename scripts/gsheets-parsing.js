@@ -68,3 +68,14 @@ function populateSection(jsonObj) {
         section.appendChild(myDiv);
     }
 }
+
+
+
+function searchEnter() {
+    if (window.event.keyCode==13) {
+        // 엔터키가 눌렸을 때 실행할 내용
+        const myNode = section.getElementById("music-list");
+        myNode.textContent = '';
+    }
+}
+
