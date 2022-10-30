@@ -366,12 +366,12 @@ button, input, optgroup, select, textarea {
 
 
 .music-list {
-    margin-left: var(--chakra-space-80);
-    padding: var(--chakra-space-4);
     display: flex; 
     flex-flow: row wrap; 
     -webkit-box-pack: center; 
     justify-content: center;
+    margin-left: 0px;
+    padding: var(--chakra-space-4);
 }
 .song-div {
     width: 150px; 
@@ -412,15 +412,13 @@ button, input, optgroup, select, textarea {
     margin: initial;
 }
 
-@media (max-width: 600px) {
-    .title {
-      font-size: 20px;
-    }
-}
 @media screen and (min-width: 48em) {
     .left  {
         width: var(--chakra-sizes-80);
         display: block;
+    }
+    .music-list {
+        margin-left: var(--chakra-space-80);
     }
 }
 
