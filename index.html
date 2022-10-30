@@ -29,15 +29,15 @@
                 </div>
 
                 <div class="left-buttons">
-                    <button onclick="sortSinger();" type="button" class="sort-button" id="bySinger">
+                    <button type="button" class="sort-button" id="bySinger" onclick="sortSinger();" >
                         가수명순&nbsp;
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                     </button>
-                    <button onclick="sortSong();"type="button" class="sort-button" id="bySong">
+                    <button type="button" class="sort-button" id="bySong" onclick="sortSong();">
                         곡명순&nbsp;
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                     </button>
-                    <button onclick="sortAdded();"type="button" class="sort-button button-selected" id="byAdd">
+                    <button type="button" class="sort-button button-selected" id="byAdd" onclick="sortAdded();">
                         등록순&nbsp;
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                     </button>
@@ -65,6 +65,9 @@
                         노래책 beta
                     </h1>
                 </div>
+                <button type="button" class="menu-button" aria-label="open menu" onclick="openMenu();">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
 
             <section class="music-list" id="musicList">
@@ -105,6 +108,9 @@
                     sort_selected = "byAdd";
                     musicbook = addOrdered;
                     populateSection(musicbook, 1);
+                }
+                function openMenu() {
+
                 }
                 
                 </script>
