@@ -25,7 +25,7 @@ request.onload = function() {
         console.log(rows);
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-    musicbook.removeChild(musicbook[0]);
+    delete musicbook.가수;
     const ASIS = musicbook;
 
     unOrdered = ASIS;

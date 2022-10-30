@@ -279,6 +279,7 @@ button, input, optgroup, select, textarea {
     display: flex;
     margin-inline-start: var(--chakra-space-8);
     margin-inline-end: var(--chakra-space-8);
+    margin-bottom: 10px;
 }
 .left-search-box {
     width: 100%;
