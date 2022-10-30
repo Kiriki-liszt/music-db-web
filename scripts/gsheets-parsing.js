@@ -6,7 +6,9 @@ let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시�
 var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
 var request = new XMLHttpRequest();
 var musicbook;
-var nameOrdered;
+var unOrdered;
+var singerOrdered;
+var songOrdered;
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
@@ -23,12 +25,19 @@ request.onload = function() {
         console.log(rows);
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-    console.log(musicbook);
     populateSection(musicbook);
 
-    nameOrdered = musicbook;
-    nameOrdered.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
-    console.log(nameOrdered);
+    const ASIS = musicbook;
+    unOrdered = ASIS;
+    console.log(unOrdered);
+
+    singerOrdered = ASIS;
+    singerOrdered.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
+    console.log(singerOrdered);
+
+    songOrdered = ASIS;
+    songOrdered.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
+    console.log(songOrdered);
 }
 
 function populateSection(jsonObj) {
@@ -36,7 +45,6 @@ function populateSection(jsonObj) {
     section.id = "musicList";
     var musiclist = jsonObj;
     const search_value = document.getElementById("inputsearch").value;
-    console.log(search_value);
 
     for (var i = 1; i < musiclist.length; i++) {
         if ( search_value != "" ) {
