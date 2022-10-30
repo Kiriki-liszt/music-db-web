@@ -19,20 +19,26 @@
             search_update.setAttribute("value", search_update.value);
         }
         function sortSinger() {
-            document.getElementsByClassName("button-selected").classList.remove("button-selected");
-            document.getElementById("bySinger").classList.add("button-selected");
+            var element = document.getElementsByClassName("button-selected");
+            element.classList.remove("button-selected");
+            element = document.getElementById("bySinger");
+            element.classList.add("button-selected");
             musicbook = singerOrdered;
             populateSection(musicbook, 1);
         }
         function sortSong() {
-            document.getElementsByClassName("button-selected").classList.remove("button-selected");
-            document.getElementById("bySong").classList.add("button-selected");
+            var element = document.getElementsByClassName("button-selected");
+            element.classList.remove("button-selected");
+            element = document.getElementById("bySong");
+            element.classList.add("button-selected");
             musicbook = songOrdered;
             populateSection(musicbook, 1);
         }
         function sortAdded() {
-            document.getElementsByClassName("button-selected").classList.remove("button-selected");
-            document.getElementById("byAdd").classList.add("button-selected");
+            var element = document.getElementsByClassName("button-selected");
+            element.classList.remove("button-selected");
+            element = document.getElementById("byAdd");
+            element.classList.add("button-selected");
             musicbook = unOrdered;
             populateSection(musicbook, 1);
         }
