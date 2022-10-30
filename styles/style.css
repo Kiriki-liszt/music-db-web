@@ -399,7 +399,7 @@ button, input, optgroup, select, textarea {
 .song-div {
     background: whitesmoke; 
     width: 10%;
-    min-width: 150px;
+    min-width: 100px;
     max-width: 200px;
     box-shadow: var(--chakra-shadows-sm);
     margin: var(--chakra-space-1);
@@ -432,7 +432,7 @@ button, input, optgroup, select, textarea {
     padding: var(--chakra-space-1);
 }
 .song-name {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -447,7 +447,7 @@ button, input, optgroup, select, textarea {
     display: flex;
     -webkit-box-pack: justify;
     place-content: center space-between;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
