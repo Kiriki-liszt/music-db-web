@@ -406,14 +406,14 @@ button, input, optgroup, select, textarea {
     box-shadow: var(--chakra-shadows-sm);
     margin: var(--chakra-space-1);
 }
-.song-div::before {
+.album-cover-div {
+    position: relative; 
+}
+.album-cover-div::before {
     height: 0px;
     content: "";
     display: block;
     padding-bottom: 100%;
-}
-.album-cover-div {
-    position: relative; 
 }
 .album-cover-img {
     border-radius: var(--chakra-radii-base);
