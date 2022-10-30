@@ -407,6 +407,7 @@ button, input, optgroup, select, textarea {
 }
 .album-cover-div {
     position: relative; 
+    padding: 5px;
 }
 .album-cover-div::before {
     height: 0px;
@@ -427,6 +428,7 @@ button, input, optgroup, select, textarea {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 5px;
 }
 .info-div {
     padding: var(--chakra-space-1);
