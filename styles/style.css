@@ -204,10 +204,11 @@ h6 {
 
 
 html {
-    /* font-size: 12px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
+    font-size: 12px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
     font-family: var(--font-sans);
     background-color: var(--main-bg-color);
-    /* --vh: 722px;
+    text-size-adjust: 100%;
+    /* --vh: 722px; */
 }
 
 body {
@@ -458,6 +459,9 @@ button, input, optgroup, select, textarea {
 }
 
 @media screen and (min-width: 48em) {
+    html {
+        font-size: 10px;
+    }
     .upper {
         display: none;
         margin-left: var(--chakra-space-60);
@@ -475,12 +479,12 @@ button, input, optgroup, select, textarea {
 
 
 :root {
-    --vh: 100%;
+    --vh: 100vh;
 }
 
 html, body, #main {
-    min-height: var(--vh);
     height: 100%;
+    min-height: var(--vh);
 }
 
 #image-grid-wrapper img:hover {
