@@ -16,6 +16,8 @@
                 while (myNode.lastElementChild) {
                     myNode.removeChild(myNode.lastElementChild);
                 }
+                const search_update = document.getElementById("inputsearch");
+
             }
         }
         
@@ -37,7 +39,7 @@
                         <div class="left-search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input type="text" id="inputsearch" onkeydown="searchEnter();" placeholder="Search" class="left-search-text" value="">
+                        <input type="text" id="inputsearch" onkeydown="searchEnter();" placeholder="Search" class="left-search-text">
                     </div>
                 </div>
 
