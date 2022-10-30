@@ -24,10 +24,7 @@ request.onload = function() {
         console.log(table);
         console.log(rows);
     }
-    musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-    console.log(JSON.stringify(musicbook));
-    delete musicbook.musicbook[0][0];
-    const ASIS = musicbook;
+    const ASIS = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
 
     unOrdered = ASIS;
     console.log(unOrdered);
@@ -61,6 +58,9 @@ function populateSection(jsonObj) {
             if ( musiclist[i][0].indexOf(search_value)==-1 && musiclist[i][1].indexOf(search_value)==-1 ) {
                 continue; 
             }
+        }
+        if (musiclist[i][0] == "가수") {
+            continue;
         }
         var myDiv = document.createElement('div');
 
