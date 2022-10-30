@@ -37,7 +37,9 @@ request.onload = function() {
     songOrdered.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
     console.log(songOrdered);
 
-    musicbook = ASIS;
+    musicbook = unOrdered;
+
+    populateSection(musicbook); 
 }
 
 function populateSection(jsonObj) {
@@ -50,7 +52,7 @@ function populateSection(jsonObj) {
     var musiclist = jsonObj;
     const search_value = document.getElementById("inputsearch").value;
 
-    for (var i = 1; i < musiclist.length; i++) {
+    for (var i = 0; i < musiclist.length; i++) {
         if ( search_value != "" ) {
             if ( musiclist[i][0].indexOf(search_value)==-1 && musiclist[i][1].indexOf(search_value)==-1 ) {
                 continue; 
