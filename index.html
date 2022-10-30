@@ -71,7 +71,7 @@
                     search_update.setAttribute("value", search_update.value);
                 }
                 function sortSinger() {
-                    var element = document.getElementById(getElementsByClassName("button-selected").id);
+                    var element = document.getElementById(document.getElementsByClassName("button-selected").id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("bySinger");
@@ -80,7 +80,7 @@
                     populateSection(musicbook, 1);
                 }
                 function sortSong() {
-                    var element = document.getElementById(getElementsByClassName("button-selected").id);
+                    var element = document.getElementById(document.getElementsByClassName("button-selected").id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("bySong");
@@ -89,7 +89,7 @@
                     populateSection(musicbook, 1);
                 }
                 function sortAdded() {
-                    var element = document.getElementById(getElementsByClassName("button-selected").id);
+                    var element = document.getElementById(document.getElementsByClassName("button-selected").id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("byAdd");
