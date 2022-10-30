@@ -35,6 +35,7 @@ function populateHeader(jsonObj) {
 
 function populateSection(jsonObj) {
     section.classList.add("music-list");
+    section.id = "musicList";
     var musiclist = jsonObj;
 
     for (var i = 1; i < musiclist.length; i++) {
