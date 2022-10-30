@@ -395,7 +395,6 @@ button, input, optgroup, select, textarea {
     justify-content: center;
     margin-left: 0px;
     padding: var(--chakra-space-4);
-    border-radius: var( --chakra-radii-lg);
 }
 .song-div {
     background: whitesmoke; 
@@ -405,6 +404,7 @@ button, input, optgroup, select, textarea {
     border-width: 1px;
     box-shadow: var(--chakra-shadows-sm);
     margin: var(--chakra-space-1);
+    border-radius: var( --chakra-radii-lg);
 }
 .album-cover-div {
     position: relative; 
