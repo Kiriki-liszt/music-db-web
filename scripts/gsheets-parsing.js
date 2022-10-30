@@ -95,9 +95,10 @@ function populateSection(jsonObj, direction) {
         songText.textContent = musiclist[i][1];
 
         coverDiv.appendChild(coverImg);
-        infoDiv.appendChild(infoSong.appendChild(songText));
+        infoSong.appendChild(songText);
+        infoDiv.appendChild(infoSong);
         infoDiv.appendChild(infoSinger);
-        myDiv.appendChild(document.createElement('div').appendChild(coverDiv));
+        myDiv.appendChild(coverDiv);
         myDiv.appendChild(infoDiv);
 
         section.appendChild(myDiv);
