@@ -233,6 +233,24 @@ img {
     display: block;
     margin: 0 auto;
 }
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+}
+button, input, optgroup, select, textarea {
+    padding: 0px;
+    line-height: inherit;
+    color: inherit;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0px;
+}
+
 
 
 .left {
@@ -252,6 +270,51 @@ img {
     margin-inline-start: var(--chakra-space-8);
     margin-inline-end: var(--chakra-space-8);
     margin-top: var(--chakra-space-8);
+}
+.left-search {
+    display: flex;
+    margin-inline-start: var(--chakra-space-8);
+    margin-inline-end: var(--chakra-space-8);
+}
+.left-search-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.left-search-icon {
+    left: 0px;
+    width: var(--chakra-sizes-10);
+    height: var(--chakra-sizes-10);
+    font-size: var(--chakra-fontSizes-md);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    pointer-events: none;
+}
+.left-search-text {
+    width: 100%;
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    appearance: none;
+    transition-property: var(--chakra-transition-property-common);
+    transition-duration: var(--chakra-transition-duration-normal);
+    font-size: var(--chakra-fontSizes-md);
+    padding-inline-start: var(--chakra-space-10);
+    padding-inline-end: var(--chakra-space-4);
+    height: var(--chakra-sizes-10);
+    border-radius: var(--chakra-radii-md);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: inherit;
+    background: inherit;
 }
 .left-text {
     margin-inline-start: var(--chakra-space-8);
