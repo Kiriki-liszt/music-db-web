@@ -24,10 +24,8 @@ request.onload = function() {
         console.log(table);
         console.log(rows);
     }
-    musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-    populateSection(musicbook);
+    const ASIS = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
 
-    const ASIS = musicbook;
     unOrdered = ASIS;
     console.log(unOrdered);
 
@@ -38,11 +36,17 @@ request.onload = function() {
     songOrdered = ASIS;
     songOrdered.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
     console.log(songOrdered);
+
+    musicbook = ASIS;
 }
 
 function populateSection(jsonObj) {
-    section.classList.add("music-list");
-    section.id = "musicList";
+
+    const myNode = document.getElementById("musicList");
+    while (myNode.lastElementChild) {
+        myNode.removeChild(myNode.lastElementChild);
+    }
+
     var musiclist = jsonObj;
     const search_value = document.getElementById("inputsearch").value;
 
