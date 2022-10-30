@@ -5,6 +5,7 @@ var section = document.querySelector('section');
 let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
 var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
 var request = new XMLHttpRequest();
+var musicbook;
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
@@ -14,31 +15,30 @@ request.onload = function() {
     if (musicbookText && musicbookText.length == 2) {
         const obj = JSON.parse(musicbookText[1]);
         const table = obj.table;
-        const header = table.cols.map(({label}) => label);
         const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
 
         console.log(obj);
         console.log(table);
         console.log(rows);
     }
-    var musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+    musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
     console.log(musicbook);
-    /* populateHeader(musicbook); */
     populateSection(musicbook);
-}
-
-function populateHeader(jsonObj) {
-    var myH1 = document.createElement('h1');
-    myH1.textContent = "";
-    header.appendChild(myH1);           // html의 header에다가 myH1을 추가한다.
 }
 
 function populateSection(jsonObj) {
     section.classList.add("music-list");
     section.id = "musicList";
     var musiclist = jsonObj;
+    const search_value = document.getElementById("inputsearch").value;
+
 
     for (var i = 1; i < musiclist.length; i++) {
+        if ( search_value != "" ) {
+            if ( (search_value != musiclist[i][0]) || (search_value != musiclist[i][1]) ) {
+                continue; 
+            }
+        }
         var myDiv = document.createElement('div');
 
         var coverDiv = document.createElement('div');
