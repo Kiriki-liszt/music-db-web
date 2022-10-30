@@ -17,10 +17,10 @@
                     myNode.removeChild(myNode.lastElementChild);
                 }
             }
-            else {
-                const search_update = document.getElementById("inputsearch");
-                search_update.setAttribute("value", search_update.value);
-            }
+        }
+        function searchUpdate() {
+            const search_update = document.getElementById("inputsearch");
+            search_update.setAttribute("value", search_update.value);
         }
         
         </script>
@@ -41,7 +41,7 @@
                         <div class="left-search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input type="text" id="inputsearch" onkeydown="searchEnter();" placeholder="Search" class="left-search-text">
+                        <input type="text" id="inputsearch" onkeydown="searchEnter();" oninput="searchUpdate();" placeholder="Search" class="left-search-text">
                     </div>
                 </div>
 
