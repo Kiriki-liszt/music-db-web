@@ -35,7 +35,7 @@ function populateSection(jsonObj) {
 
     for (var i = 1; i < musiclist.length; i++) {
         if ( search_value != "" ) {
-            if ( search_value.indexof(musiclist[i][0]) || search_value.indexof(musiclist[i][1]) ) {
+            if ( musiclist[i][0].indexOf(search_value) || musiclist[i][1].indexOf(search_value) ) {
                 continue; 
             }
         }
