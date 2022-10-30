@@ -439,7 +439,7 @@ button, input, optgroup, select, textarea {
     white-space: nowrap;
     text-overflow: ellipsis;
     margin: initial;
-    display: flex;
+    /* display: flex; */
     -webkit-box-pack: justify;
     place-content: center space-between;
     margin-top: var(--chakra-space-1);
