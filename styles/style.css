@@ -359,7 +359,6 @@ button, input, optgroup, select, textarea {
     object-fit: cover;
     margin: 3px;
 }
-
 .singer-name{
     margin: initial;
 }
@@ -369,7 +368,6 @@ button, input, optgroup, select, textarea {
     white-space:nowrap;
     text-overflow: ellipsis;
     margin: initial;
-    font-size: 1.4em;
 }
 
 
