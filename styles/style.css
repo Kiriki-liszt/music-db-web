@@ -398,7 +398,7 @@ button, input, optgroup, select, textarea {
 }
 .song-div {
     background: whitesmoke; 
-    width: 10%;
+    width: 12%;
     min-width: 100px;
     max-width: 200px;
     box-shadow: var(--chakra-shadows-sm);
