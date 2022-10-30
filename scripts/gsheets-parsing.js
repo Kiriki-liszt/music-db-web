@@ -25,6 +25,7 @@ request.onload = function() {
         console.log(rows);
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+    console.log(JSON.stringify(musicbook));
     delete musicbook.musicbook[0][0];
     const ASIS = musicbook;
 
