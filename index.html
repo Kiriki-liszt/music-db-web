@@ -71,9 +71,11 @@
                     search_update.setAttribute("value", search_update.value);
                 }
                 function sortSinger() {
-                    var element_a = document.getElementsByClassName("button-selected").getAttribute('id');
-                    var element = document.getElementById(element_a);
-                    console.log(element_a);
+                    var elem_found = document.getElementsByClassName("button-selected");
+                    var elem_id = elem_found.getAttribute("id");
+                    var element = document.getElementById(elem_id);
+                    console.log(elem_found);
+                    console.log(elem_id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("bySinger");
@@ -82,9 +84,11 @@
                     populateSection(musicbook, 1);
                 }
                 function sortSong() {
-                    var element_a = document.getElementsByClassName("button-selected").getAttribute('id');
-                    var element = document.getElementById(element_a);
-                    console.log(element_a);
+                    var elem_found = document.getElementsByClassName("button-selected");
+                    var elem_id = elem_found.getAttribute("id");
+                    var element = document.getElementById(elem_id);
+                    console.log(elem_found);
+                    console.log(elem_id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("bySong");
@@ -93,9 +97,11 @@
                     populateSection(musicbook, 1);
                 }
                 function sortAdded() {
-                    var element_a = document.getElementsByClassName("button-selected").getAttribute('id');
-                    var element = document.getElementById(element_a);
-                    console.log(element_a);
+                    var elem_found = document.getElementsByClassName("button-selected");
+                    var elem_id = elem_found.getAttribute("id");
+                    var element = document.getElementById(elem_id);
+                    console.log(elem_found);
+                    console.log(elem_id);
                     console.log(element);
                     element.classList.remove("button-selected");
                     element = document.getElementById("byAdd");
