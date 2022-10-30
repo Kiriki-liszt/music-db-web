@@ -6,6 +6,7 @@ let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시�
 var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
 var request = new XMLHttpRequest();
 var musicbook;
+var nameOrdered;
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
@@ -24,6 +25,17 @@ request.onload = function() {
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
     console.log(musicbook);
     populateSection(musicbook);
+
+    const sorted = (ob) => {
+        const arr = [];
+        for(let i in ob) {
+          arr.push([i, ob[i]]);
+        }
+        return arr.sorted((a, b) => a[1] - b[1]);
+    }
+    Object.values(musicbook).sort().forEach(function(value) { nameOrdered[value] = musicbook[value];});
+    console.log(sorted);
+    console.log(nameOrdered);
 }
 
 function populateSection(jsonObj) {
