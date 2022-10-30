@@ -418,8 +418,6 @@ button, input, optgroup, select, textarea {
 .album-cover-img {
     border-radius: var( --chakra-radii-lg);
     object-fit: cover;
-}
-.album-cover-img:not(style) {
     overflow: hidden;
     position: absolute;
     inset: 0px;
