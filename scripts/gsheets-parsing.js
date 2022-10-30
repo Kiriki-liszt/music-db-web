@@ -96,7 +96,7 @@ function populateSection(jsonObj, direction) {
         coverDiv.appendChild(coverImg);
         infoDiv.appendChild(infoSong);
         infoDiv.appendChild(infoSinger);
-        myDiv.appendChild(coverDiv);
+        myDiv.appendChild(document.createElement('div').appendChild(coverDiv));
         myDiv.appendChild(infoDiv);
 
         section.appendChild(myDiv);
