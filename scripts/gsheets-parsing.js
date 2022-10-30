@@ -40,6 +40,7 @@ request.onload = function() {
     console.log(songOrdered);
 
     musicbook = unOrdered;
+    console.log(musicbook);
 
     populateSection(musicbook); 
 }
