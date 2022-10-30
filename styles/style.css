@@ -403,12 +403,12 @@ button, input, optgroup, select, textarea {
     min-width: 100px;
     max-width: 200px;
     box-shadow: var(--chakra-shadows-sm);
-    margin: var(--chakra-space-1);
+    margin: var(--chakra-space-1-5);
     border-radius: var( --chakra-radii-lg);
 }
 .album-cover-div {
     position: relative; 
-    padding: 5px;
+    margin: var(--chakra-sizes-2);
 }
 .album-cover-div::before {
     height: 0px;
@@ -429,10 +429,9 @@ button, input, optgroup, select, textarea {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 5px;
 }
 .info-div {
-    padding: var(--chakra-space-1);
+    padding: var(--chakra-space-2);
 }
 .song-name {
     font-size: 1.4rem;
