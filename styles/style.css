@@ -230,8 +230,11 @@ p, li {
 }
 
 img {
-    display: block;
-    margin: 0 auto;
+    border-style: none;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
 }
 img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
@@ -394,22 +397,20 @@ button, input, optgroup, select, textarea {
     padding: var(--chakra-space-4);
 }
 .song-div {
-    width: 150px; 
-    height: 215px; 
-    margin: 5px; 
-    background-color: whitesmoke; 
-    border-radius: 7px; 
-    padding: 5px;
+    background: whitesmoke; 
+    width: 10%;
+    min-width: 150px;
+    max-width: 200px;
+    border-width: 1px;
+    box-shadow: var(--chakra-shadows-sm);
+    margin: var(--chakra-space-1);
 }
 .album-cover-div {
     position: relative; 
-    width: 140px; 
-    height: 140px;
-    margin-bottom: 5px;
 }
 .album-cover-img {
     overflow: hidden; 
-    position: relative; 
+    position: absolute; 
     inset: 0px; 
     display: flex; 
     -webkit-box-pack: center; 
@@ -421,15 +422,29 @@ button, input, optgroup, select, textarea {
     border-radius: 7px; 
     object-fit: cover;
 }
-.singer-name{
-    margin: initial;
+.info-div {
+    padding: var(--chakra-space-1);
 }
 .song-name {
     font-size: 1.4em;
-    overflow:hidden;
-    white-space:nowrap;
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     margin: initial;
+    display: flex;
+    -webkit-box-pack: justify;
+    place-content: center space-between;
+    margin-top: var(--chakra-space-1);
+    font-weight: var(--chakra-fontWeights-semibold);
+}
+.singer-name{
+    display: flex;
+    -webkit-box-pack: justify;
+    place-content: center space-between;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @media screen and (min-width: 48em) {
