@@ -9,6 +9,7 @@ var musicbook;
 var addOrdered;
 var singerOrdered;
 var songOrdered;
+var categories;
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
@@ -40,7 +41,23 @@ request.onload = function() {
     musicbook = addOrdered;
     console.log(musicbook);
 
+    categorize(musicbook);
+    console.log(categories);
+
     populateSection(musicbook, 1); 
+}
+
+function categorize(jsonObj) {
+    var category = [];
+    var cnt = 0;
+    for (var i = 0; i < jsonObj.length; i++) {
+        for (var j = 0; j < category.length; j++) {
+            if (category[j] != jsonObj[i][3]) {
+                category[cnt++] = jsonObj[i][3];
+            }
+        }
+    }
+    categories = JSON.parse(JSON.stringify(category));
 }
 
 function populateSection(jsonObj, direction) {
