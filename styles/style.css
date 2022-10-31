@@ -501,7 +501,7 @@ i#menu-icon {
     flex-direction: column;
     justify-content: space-evenly;
 }
-.cartegory-div {
+.category-div {
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
