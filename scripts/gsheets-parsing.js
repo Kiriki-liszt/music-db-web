@@ -1,6 +1,7 @@
 
 var header  = document.querySelector('header');
 var section = document.querySelector('section');
+var category = document.querySelector('category');
 
 let myKey = "1QTqccTGFGoKpCj3xj3ZOUr7K2klsEr_IW9qRs8xkDuQ"; // 스프레드시트 KEY
 var requestURL = `https://docs.google.com/spreadsheets/d/${myKey}/gviz/tq?tqx=out:json`;
@@ -42,22 +43,35 @@ request.onload = function() {
 }
 
 function categorize(jsonObj) {
-    var category = [];
+    var tmp_category = [];
     var cnt = 0;
     var flag;
     for (var i = 1; i < jsonObj.length; i++) {
         flag = 0;
-        var looplength = (category.length + 1);
+        var looplength = (tmp_category.length + 1);
         for (var j = 0; j < looplength; j++) {
-            if (category[j] == jsonObj[i][2]) {
+            if (tmp_category[j] == jsonObj[i][2]) {
                 flag++;
             }
         }
         if (flag == 0) {
-            category[cnt++] = jsonObj[i][2];
+            tmp_category[cnt++] = jsonObj[i][2];
         }
     }
-    categories = JSON.parse(JSON.stringify(category));
+    categories = JSON.parse(JSON.stringify(tmp_category));
+
+    for (var i = 0; i < categories.length; i++) {
+        var myDiv = document.createElement('div');
+        var cateName = document.createElement('p');
+        cateName.textContent = categories[i];
+
+        myDiv.classList.add("category-div");
+        cateName.classList.add("cate-Name");
+
+        myDiv.appendChild(cateName);
+
+        category.appendChild(myDiv);
+    }
 }
 
 function populateSection(jsonObj, direction) {

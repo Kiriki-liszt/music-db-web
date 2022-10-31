@@ -362,8 +362,6 @@ button, input, optgroup, select, textarea {
     line-height: 1.2;
     border-radius: var(--chakra-radii-md);
     font-weight: 900;
-    transition-property: var(--chakra-transition-property-common);
-    transition-duration: var(--chakra-transition-duration-normal);
     height: var(--chakra-sizes-10);
     min-width: var(--chakra-sizes-10);
     font-size: var(--chakra-fontSizes-lg);
@@ -372,7 +370,6 @@ button, input, optgroup, select, textarea {
     border-width: 1px;
     border-style: solid;
     border-image: initial;
-    border-color: var(--chakra-colors-gray-200);
     color: inherit;
     padding: 0px;
 }
@@ -497,7 +494,39 @@ i#menu-icon {
     margin-inline-start: var(--chakra-space-8);
     margin-inline-end: var(--chakra-space-8);
 }
-
+.category-list {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.cartegory-div {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    width: auto;
+    line-height: 1.2;
+    border-radius: var(--chakra-radii-md);
+    font-weight: var(--chakra-fontWeights-semibold);
+    transition-property: var(--chakra-transition-property-common);
+    transition-duration: var(--chakra-transition-duration-normal);
+    height: var(--chakra-sizes-8);
+    min-width: var(--chakra-sizes-8);
+    font-size: var(--chakra-fontSizes-lg);
+    padding-inline-start: var(--chakra-space-3);
+    padding-inline-end: var(--chakra-space-3);
+    color: #2C7A7B;
+    background: var(--chakra-colors-transparent);
+}
 
 
 .music-list {
