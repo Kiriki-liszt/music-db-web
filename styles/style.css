@@ -389,7 +389,7 @@ button, input, optgroup, select, textarea {
 }
 .left-hide {
     display: block !important;
-    transform: translateX(var(--chakra-sizes-80));
+    transform: translateX(calc(0rem - var(--chakra-sizes-80)));
 }
 .left-head {
     display: flex;
