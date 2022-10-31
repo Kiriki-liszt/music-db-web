@@ -269,13 +269,17 @@ html {
     /* background-color: var(--main-bg-color); */
     text-size-adjust: 100%;
     /* --vh: 722px; */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 
 body {
     /*width: 600px;*/
     margin: 0 auto;
     /* background-color: #E4E3E3; */
-    overflow: hidden;
 }
 
 h1 {
