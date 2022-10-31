@@ -28,7 +28,6 @@ request.onload = function() {
         console.log(rows);
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
-    categorize(musicbook);
     
     addOrdered = JSON.parse(JSON.stringify(musicbook));
 
@@ -38,7 +37,11 @@ request.onload = function() {
     musicbook.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
     singerOrdered = JSON.parse(JSON.stringify(musicbook));
 
+    categorize(musicbook);
+
     musicbook = addOrdered;
+    
+    console.log(musicbook);
 
     populateSection(musicbook, 1); 
 }
@@ -107,7 +110,7 @@ function populateSection(jsonObj, direction) {
         if (musiclist[i][0] == "가수") {
             continue;
         }
-        
+
         var myDiv = document.createElement('div');
 
         var coverDiv = document.createElement('div');
