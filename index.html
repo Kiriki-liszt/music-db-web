@@ -12,7 +12,7 @@
 
     <body>
         <div>
-            <div class="left">
+            <div class="left" id="id-left">
                 <div class="left-head">
                     <h1>
                         노래책 beta
@@ -65,7 +65,7 @@
                         노래책 beta
                     </h1>
                 </div>
-                <button type="button" class="menu-button" aria-label="open menu" onclick="openMenu();">
+                <button type="button" class="menu-button" id="openMenu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -112,7 +112,11 @@
                 function openMenu() {
 
                 }
-                
+                const open_menu = document.getElementById("openMenu");
+                open_menu.onclick = function() {
+                    document.getElementById("id-left").classList.remove("hide");
+                };
+                                
                 </script>
         </div>
     </body>

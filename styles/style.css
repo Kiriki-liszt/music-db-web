@@ -478,6 +478,10 @@ button, input, optgroup, select, textarea {
     margin-inline-end: var(--chakra-space-8);
 }
 
+div.left {
+    
+}
+
 
 
 .music-list {
