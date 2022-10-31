@@ -114,16 +114,7 @@
                     }
                 };
 
-                var cate_click = document.getElementsByClassName("cate-Name");
 
-                for (var i = 0; i < cate_click.length; i++) {
-                    cate_click[i].onclick = function() { 
-                        document.getElementById(cate_selected).classList.remove("cate-selected");
-                        document.getElementById(cate_click[i].id).classList.add("cate-selected");
-                        cate_selected = cate_click[i].id;
-                        populateSection(musicbook, 1, cate_selected);
-                    }
-                }
                                 
                 </script>
         </div>
