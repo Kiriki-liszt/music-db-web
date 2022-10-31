@@ -113,7 +113,13 @@
 
                 }
                 document.getElementById("openMenu").onclick = function() {
-                    document.getElementById("id-left").classList.remove("left-hide");
+                    var idLeft = document.getElementById("id-left");
+                    if (idLeft.classList.contains("left-hide")) {
+                        idLeft.classList.remove("left-hide");
+                    }
+                    else {
+                        idLeft.classList.add("left-hide");
+                    }
                 };
                                 
                 </script>

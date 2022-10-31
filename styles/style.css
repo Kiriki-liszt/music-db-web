@@ -372,7 +372,7 @@ button, input, optgroup, select, textarea {
 }
 
 .left {
-    width: var(--chakra-sizes-80);
+    width: var(--chakra-sizes-md);
     height: var(--chakra-sizes-full);
     background: antiquewhite;
 
