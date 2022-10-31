@@ -174,7 +174,7 @@
 	--bg_color-end:		#303030;	/* 목표 */
 	--color-com:		#fafafa;
 	--bg-color: 		rgba(36, 36, 36, 0.9);
-	--color-1:			#D8E3EE
+	--color-1:			#D8E3EE;
     --falling-slowly:	20s;
 }
 
@@ -478,8 +478,8 @@ button, input, optgroup, select, textarea {
     margin-inline-end: var(--chakra-space-8);
 }
 
-div.left {
-    
+div.left.hide {
+    display: none;
 }
 
 
@@ -551,6 +551,8 @@ div.left {
     white-space: nowrap;
     margin: auto;
 }
+
+
 /* desktop */
 @media screen and (min-width: 48em) {
     html {
@@ -563,8 +565,8 @@ div.left {
         padding-inline-end: var(--chakra-space-24);
     }
     .left {
-        width: var(--chakra-sizes-80);
-        display: block;
+        width: var(--chakra-sizes-80) !important;
+        display: block !important;
     }
     .song-div {
         min-width: 150px;
