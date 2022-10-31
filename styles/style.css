@@ -575,6 +575,7 @@ button, input, optgroup, select, textarea {
     }
     .left {
         width: var(--chakra-sizes-80) !important;
+        transform: translateX(0px) !important;
         display: block !important;
     }
     .song-div {
