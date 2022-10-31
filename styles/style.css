@@ -275,6 +275,7 @@ body {
     /*width: 600px;*/
     margin: 0 auto;
     /* background-color: #E4E3E3; */
+    overflow: hidden;
 }
 
 h1 {
