@@ -62,7 +62,7 @@ function categorize(jsonObj) {
 
     for (var i = 0; i < categories.length; i++) {
         var myDiv = document.createElement('div');
-        var cateName = document.createElement('p');
+        var cateName = document.createElement('button');
         cateName.textContent = categories[i];
 
         myDiv.classList.add("category-div");

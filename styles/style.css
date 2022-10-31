@@ -514,11 +514,8 @@ i#menu-icon {
     outline: transparent solid 2px;
     outline-offset: 2px;
     width: auto;
-    line-height: 1.2;
+    line-height: 1.4;
     border-radius: var(--chakra-radii-md);
-    font-weight: var(--chakra-fontWeights-semibold);
-    transition-property: var(--chakra-transition-property-common);
-    transition-duration: var(--chakra-transition-duration-normal);
     height: var(--chakra-sizes-8);
     min-width: var(--chakra-sizes-8);
     font-size: var(--chakra-fontSizes-lg);
