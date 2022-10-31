@@ -75,7 +75,7 @@ function categorize(jsonObj) {
     }
 }
 
-function populateSection(jsonObj, direction, cate_sel) {
+function populateSection(jsonObj, direction) {
 
     var musiclist = jsonObj;
 
@@ -107,10 +107,7 @@ function populateSection(jsonObj, direction, cate_sel) {
         if (musiclist[i][0] == "가수") {
             continue;
         }
-        if ( (cate_sel != "") && (musiclist[i][2] != cate_sel) ) {
-            continue;
-        }
-
+        
         var myDiv = document.createElement('div');
 
         var coverDiv = document.createElement('div');
