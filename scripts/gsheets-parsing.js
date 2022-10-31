@@ -11,6 +11,7 @@ var addOrdered;
 var singerOrdered;
 var songOrdered;
 var categories;
+var categoryFlag = "";
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
@@ -74,14 +75,17 @@ function categorize(jsonObj) {
     }
 }
 
-function populateSection(jsonObj, direction) {
+function populateSection(jsonObj, direction, cate_sel) {
 
+    var musiclist = jsonObj;
+
+    /* 기존 노래들 클리어 */
     const myNode = document.getElementById("musicList");
     while (myNode.lastElementChild) {
         myNode.removeChild(myNode.lastElementChild);
     }
 
-    var musiclist = jsonObj;
+    /* 검색 입력창에 들어와있는거 저장 */
     const search_value = document.getElementById("inputsearch").value;
 
     var i, end;
@@ -103,6 +107,10 @@ function populateSection(jsonObj, direction) {
         if (musiclist[i][0] == "가수") {
             continue;
         }
+        if ( (cate_sel != "") && (musiclist[i][2] != cate_sel) ) {
+            continue;
+        }
+
         var myDiv = document.createElement('div');
 
         var coverDiv = document.createElement('div');

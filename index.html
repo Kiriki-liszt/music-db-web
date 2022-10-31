@@ -80,6 +80,7 @@
                 }
 
                 var sort_selected = "byAdd";
+                var cate_selected = "";
 
                 function sortSinger() {
                     document.getElementById(sort_selected).classList.remove("button-selected");
@@ -102,9 +103,7 @@
                     musicbook = addOrdered;
                     populateSection(musicbook, 1);
                 }
-                function openMenu() {
 
-                }
                 document.getElementById("openMenu").onclick = function() {
                     var idLeft = document.getElementById("id-left");
                     if (idLeft.classList.contains("left-hide")) {
@@ -114,6 +113,17 @@
                         idLeft.classList.add("left-hide");
                     }
                 };
+
+                var cate_click = document.getElementsByClassName("cate-Name");
+
+                for (var i = 0; i < cate_click.length; i++) {
+                    cate_click[i].onclick = function() { 
+                        document.getElementById(cate_selected).classList.remove("cate-selected");
+                        document.getElementById(cate_click[i].id).classList.add("cate-selected");
+                        cate_selected = cate_click[i].id;
+                        populateSection(musicbook, 1, cate_selected);
+                    }
+                }
                                 
                 </script>
         </div>
