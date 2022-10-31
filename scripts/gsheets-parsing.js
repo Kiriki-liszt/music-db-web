@@ -26,23 +26,17 @@ request.onload = function() {
         console.log(rows);
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+    categorize(musicbook);
     
     addOrdered = JSON.parse(JSON.stringify(musicbook));
-    console.log(addOrdered);
 
     musicbook.sort(function(a, b) { return a[1]<b[1] ? -1 : (a[1]>b[1] ? 1 : 0); } );
     songOrdered = JSON.parse(JSON.stringify(musicbook));
-    console.log(songOrdered);
 
     musicbook.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
     singerOrdered = JSON.parse(JSON.stringify(musicbook));
-    console.log(singerOrdered);
 
     musicbook = addOrdered;
-    console.log(musicbook);
-
-    categorize(musicbook);
-    console.log(categories);
 
     populateSection(musicbook, 1); 
 }
@@ -50,11 +44,17 @@ request.onload = function() {
 function categorize(jsonObj) {
     var category = [];
     var cnt = 0;
-    for (var i = 0; i < jsonObj.length; i++) {
-        for (var j = 0; j < category.length; j++) {
-            if (category[j] != jsonObj[i][3]) {
-                category[cnt++] = jsonObj[i][3];
+    var flag;
+    for (var i = 1; i < jsonObj.length; i++) {
+        flag = 0;
+        var looplength = (category.length + 1);
+        for (var j = 0; j < looplength; j++) {
+            if (category[j] == jsonObj[i][2]) {
+                flag++;
             }
+        }
+        if (flag == 0) {
+            category[cnt++] = jsonObj[i][2];
         }
     }
     categories = JSON.parse(JSON.stringify(category));
