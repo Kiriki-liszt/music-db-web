@@ -198,7 +198,7 @@ document.getElementById("openMenu").onclick = function() {
 var cate_click = document.getElementsByClassName("cate-name");
 for (var i = 0; i < cate_click.length; i++) {
     cate_click[i].onclick = function() { 
-        cate_selected.classList.remove("cate-selected");
+        document.getElementById(cate_selected).parentElement.classList.remove("cate-selected");
         document.getElementById(this.id).parentElement.classList.add("cate-selected");
         cate_selected = this.id;
         console.log(cate_selected);
