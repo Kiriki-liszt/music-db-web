@@ -409,7 +409,7 @@ i#menu-icon {
     display: flex;
     margin-inline-start: var(--chakra-space-8);
     margin-inline-end: var(--chakra-space-8);
-    margin-bottom: var(--chakra-space-8);
+    margin-bottom: var(--chakra-sizes-5);
 }
 .left-search-box {
     width: 100%;
