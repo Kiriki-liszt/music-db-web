@@ -168,21 +168,21 @@ function sortSinger() {
     document.getElementById("bySinger").classList.add("button-selected");
     sort_selected = "bySinger";
     musicbook = singerOrdered;
-    populateSection(musicbook, 1, cate_selected);
+    populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
 }
 function sortSong() {
     document.getElementById(sort_selected).classList.remove("button-selected");
     document.getElementById("bySong").classList.add("button-selected");
     sort_selected = "bySong";
     musicbook = songOrdered;
-    populateSection(musicbook, 1, cate_selected);
+    populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
 }
 function sortAdded() {
     document.getElementById(sort_selected).classList.remove("button-selected");
     document.getElementById("byAdd").classList.add("button-selected");
     sort_selected = "byAdd";
     musicbook = addOrdered;
-    populateSection(musicbook, 1, cate_selected);
+    populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
 }
 
 document.getElementById("openMenu").onclick = function() {
