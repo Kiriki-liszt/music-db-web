@@ -41,15 +41,15 @@ request.onload = function() {
 
     musicbook = addOrdered;
     
-    console.log(musicbook);
-
-    populateSection(musicbook, 1); 
+    populateSection(musicbook, 1, "전체"); 
 }
 
 function categorize(jsonObj) {
     var tmp_category = [];
     var cnt = 0;
     var flag;
+
+    tmp_category[cnt++] = "전체";
     for (var i = 1; i < jsonObj.length; i++) {
         flag = 0;
         var looplength = (tmp_category.length + 1);
@@ -70,15 +70,18 @@ function categorize(jsonObj) {
         cateName.textContent = categories[i];
 
         myDiv.classList.add("category-div");
-        cateName.classList.add("cate-Name");
+        cateName.classList.add("cate-name");
+        cateName.setAttribute("id", "category-" + i);
 
         myDiv.appendChild(cateName);
 
         category.appendChild(myDiv);
     }
+    cate_selected = "category-0";
+    document.getElementById("category-0").parentElement.classList.add("cate-selected")
 }
 
-function populateSection(jsonObj, direction) {
+function populateSection(jsonObj, direction, cate_sel) {
 
     var musiclist = jsonObj;
 
@@ -108,6 +111,9 @@ function populateSection(jsonObj, direction) {
             }
         }
         if (musiclist[i][0] == "가수") {
+            continue;
+        }
+        if ( (cate_sel != "전체") && (musiclist[i][2] != cate_sel) ) {
             continue;
         }
 
@@ -142,3 +148,60 @@ function populateSection(jsonObj, direction) {
     }
 }
 
+
+
+function searchEnter() {
+    if (window.event.keyCode==13) {               
+        populateSection(musicbook, 1);
+    }
+}
+function searchUpdate() {
+    const search_update = document.getElementById("inputsearch");
+    search_update.setAttribute("value", search_update.value);
+}
+
+var sort_selected = "byAdd";
+var cate_selected = "category-0";
+
+function sortSinger() {
+    document.getElementById(sort_selected).classList.remove("button-selected");
+    document.getElementById("bySinger").classList.add("button-selected");
+    sort_selected = "bySinger";
+    musicbook = singerOrdered;
+    populateSection(musicbook, 1);
+}
+function sortSong() {
+    document.getElementById(sort_selected).classList.remove("button-selected");
+    document.getElementById("bySong").classList.add("button-selected");
+    sort_selected = "bySong";
+    musicbook = songOrdered;
+    populateSection(musicbook, 1);
+}
+function sortAdded() {
+    document.getElementById(sort_selected).classList.remove("button-selected");
+    document.getElementById("byAdd").classList.add("button-selected");
+    sort_selected = "byAdd";
+    musicbook = addOrdered;
+    populateSection(musicbook, 1);
+}
+
+document.getElementById("openMenu").onclick = function() {
+    var idLeft = document.getElementById("id-left");
+    if (idLeft.classList.contains("left-hide")) {
+        idLeft.classList.remove("left-hide");
+    }
+    else {
+        idLeft.classList.add("left-hide");
+    }
+};        
+
+var cate_click = document.getElementsByClassName("cate-name");
+for (var i = 0; i < cate_click.length; i++) {
+    cate_click[i].onclick = function() { 
+        cate_selected.classList.remove("cate-selected");
+        document.getElementById(this.id).parentElement.classList.add("cate-selected");
+        cate_selected = this.id;
+        console.log(cate_selected);
+        populateSection(musicbook, 1, cate_selected);
+    }
+}

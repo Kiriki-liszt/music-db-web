@@ -534,6 +534,10 @@ i#menu-icon {
     height: var(--chakra-lineHeights-tall);
     margin-top: 0.3rem;
 }
+.cate-sel {
+    color: #6B46C1;
+    background: var(--chakra-colors-transparent);
+}
 
 
 .music-list {
