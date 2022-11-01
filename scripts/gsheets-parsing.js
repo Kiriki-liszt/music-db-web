@@ -28,6 +28,8 @@ request.onload = function() {
         console.log(rows);
     }
     musicbook = JSON.parse(musicbookText[1]).table.rows.map(({c}) => c.map(e => e ? (e.v || "") : ""));
+
+    categorize(musicbook);
     
     addOrdered = JSON.parse(JSON.stringify(musicbook));
 
@@ -36,8 +38,6 @@ request.onload = function() {
 
     musicbook.sort(function(a, b) { return a[0]<b[0] ? -1 : (a[0]>b[0] ? 1 : 0); } );
     singerOrdered = JSON.parse(JSON.stringify(musicbook));
-
-    categorize(musicbook);
 
     musicbook = addOrdered;
     
@@ -168,21 +168,21 @@ function sortSinger() {
     document.getElementById("bySinger").classList.add("button-selected");
     sort_selected = "bySinger";
     musicbook = singerOrdered;
-    populateSection(musicbook, 1);
+    populateSection(musicbook, 1, cate_selected);
 }
 function sortSong() {
     document.getElementById(sort_selected).classList.remove("button-selected");
     document.getElementById("bySong").classList.add("button-selected");
     sort_selected = "bySong";
     musicbook = songOrdered;
-    populateSection(musicbook, 1);
+    populateSection(musicbook, 1, cate_selected);
 }
 function sortAdded() {
     document.getElementById(sort_selected).classList.remove("button-selected");
     document.getElementById("byAdd").classList.add("button-selected");
     sort_selected = "byAdd";
     musicbook = addOrdered;
-    populateSection(musicbook, 1);
+    populateSection(musicbook, 1, cate_selected);
 }
 
 document.getElementById("openMenu").onclick = function() {
