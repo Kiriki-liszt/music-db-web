@@ -316,7 +316,6 @@ button, input {
 button, input, optgroup, select, textarea {
     font-family: inherit;
     font-size: 100%;
-    line-height: 1.15;
     margin: 0px;
 }
 *, ::before, ::after {
@@ -458,6 +457,7 @@ i#menu-icon {
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: var(--chakra-sizes-2-5);
 }
 .sort-button {
     display: inline-flex;
@@ -500,6 +500,7 @@ i#menu-icon {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: var(--chakra-sizes-3);
 }
 .category-div {
     display: inline-flex;
@@ -514,15 +515,24 @@ i#menu-icon {
     outline: transparent solid 2px;
     outline-offset: 2px;
     width: auto;
-    line-height: 1.4;
+    height: var(--chakra-lineHeights-tall);
     border-radius: var(--chakra-radii-md);
-    height: var(--chakra-sizes-8);
+    border-style: solid;
+    border-width: var(--chakra-sizes-1);
     min-width: var(--chakra-sizes-8);
-    font-size: var(--chakra-fontSizes-lg);
+    font-size: var(--chakra-fontSizes-xl);
     padding-inline-start: var(--chakra-space-3);
     padding-inline-end: var(--chakra-space-3);
     color: #2C7A7B;
-    background: var(--chakra-colors-transparent);
+    background: transparent;
+    font-family: var(--font-heading);
+    margin: var(--chakra-sizes-2);
+}
+.cate-name {
+    background: transparent;
+    line-height: var(--chakra-lineHeights-tall);
+    height: var(--chakra-lineHeights-tall);
+    margin-top: 0.3rem;
 }
 
 
@@ -538,7 +548,7 @@ i#menu-icon {
     background: whitesmoke; 
     width: 12%;
     min-width: 110px;
-    max-width: 200px;
+    max-width: 180px;
     box-shadow: var(--chakra-shadows-sm);
     margin: var(--chakra-space-2);
     border-radius: var( --chakra-radii-lg);
