@@ -79,7 +79,19 @@ function categorize(jsonObj) {
     cate_selected = "category-0";
     document.getElementById("category-0").parentElement.classList.add("cate-selected");
 
-    
+    var cate_click = document.getElementsByClassName("cate-name");
+    console.log(cate_click);
+    for (var i = 0; i < cate_click.length; i++) {
+        console.log(cate_click[i]);
+        cate_click[i].onclick = function() { 
+            // console.log(this);
+            document.getElementById(cate_selected).parentElement.classList.remove("cate-selected");
+            // document.getElementById(this.id).parentElement.classList.add("cate-selected");
+            // cate_selected = this.id;
+            console.log(cate_selected);
+            populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
+        }
+    }
 }
 
 function populateSection(jsonObj, direction, cate_sel) {
