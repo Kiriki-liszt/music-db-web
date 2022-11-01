@@ -457,10 +457,10 @@ i#menu-icon {
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: var(--chakra-sizes-2-5);
+    margin: var(--chakra-sizes-3);
     border-style: solid;
     border-width: var(--chakra-sizes-1);
-    border-color: aliceblue;
+    border-color: #6B46C1;
     border-radius: var(--chakra-radii-md);
 }
 .sort-button {
@@ -484,7 +484,7 @@ i#menu-icon {
     transition-duration: var(--chakra-transition-duration-normal);
     height: var(--chakra-sizes-8);
     min-width: var(--chakra-sizes-8);
-    font-size: var(--chakra-fontSizes-lg);
+    font-size: var(--chakra-fontSizes-xl);
     padding-inline-start: var(--chakra-space-3);
     padding-inline-end: var(--chakra-space-3);
     color: #2C7A7B;
