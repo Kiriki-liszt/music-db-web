@@ -77,7 +77,9 @@ function categorize(jsonObj) {
         category.appendChild(myDiv);
     }
     cate_selected = "category-0";
-    document.getElementById("category-0").parentElement.classList.add("cate-selected")
+    document.getElementById("category-0").parentElement.classList.add("cate-selected");
+
+    
 }
 
 function populateSection(jsonObj, direction, cate_sel) {
