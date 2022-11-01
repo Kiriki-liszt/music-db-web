@@ -519,7 +519,7 @@ i#menu-icon {
     border-radius: var(--chakra-radii-md);
     border-style: solid;
     border-width: var(--chakra-sizes-1);
-    min-width: var(--chakra-sizes-8);
+    min-width: var(--chakra-sizes-48);
     font-size: var(--chakra-fontSizes-xl);
     padding-inline-start: var(--chakra-space-3);
     padding-inline-end: var(--chakra-space-3);
