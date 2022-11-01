@@ -458,6 +458,10 @@ i#menu-icon {
     flex-direction: row;
     justify-content: space-evenly;
     margin: var(--chakra-sizes-2-5);
+    border-style: solid;
+    border-width: var(--chakra-sizes-1);
+    border-color: aliceblue;
+    border-radius: var(--chakra-radii-md);
 }
 .sort-button {
     display: inline-flex;
