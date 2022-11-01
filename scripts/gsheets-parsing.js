@@ -149,19 +149,18 @@ function populateSection(jsonObj, direction, cate_sel) {
 }
 
 
+var sort_selected = "byAdd";
+var cate_selected = "category-0";
 
 function searchEnter() {
     if (window.event.keyCode==13) {               
-        populateSection(musicbook, 1);
+        populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
     }
 }
 function searchUpdate() {
     const search_update = document.getElementById("inputsearch");
     search_update.setAttribute("value", search_update.value);
 }
-
-var sort_selected = "byAdd";
-var cate_selected = "category-0";
 
 function sortSinger() {
     document.getElementById(sort_selected).classList.remove("button-selected");
