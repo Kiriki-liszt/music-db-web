@@ -11,7 +11,6 @@ var addOrdered;
 var singerOrdered;
 var songOrdered;
 var categories;
-var categoryFlag = "";
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
@@ -195,6 +194,7 @@ document.getElementById("openMenu").onclick = function() {
 };        
 
 var cate_click = document.getElementsByClassName("cate-name");
+console.log(cate_click);
 for (var i = 0; i < cate_click.length; i++) {
     cate_click[i].onclick = function() { 
         document.getElementById(cate_selected).parentElement.classList.remove("cate-selected");
