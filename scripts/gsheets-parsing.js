@@ -202,6 +202,6 @@ for (var i = 0; i < cate_click.length; i++) {
         document.getElementById(this.id).parentElement.classList.add("cate-selected");
         cate_selected = this.id;
         console.log(cate_selected);
-        populateSection(musicbook, 1, cate_selected);
+        populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
     }
 }
