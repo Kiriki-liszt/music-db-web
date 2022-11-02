@@ -31,7 +31,7 @@ function sortAdded() {
     document.getElementById("byAdd").classList.add("button-selected");
     sort_selected = "byAdd";
     musicbook = addOrdered;
-    populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
+    populateSection(musicbook, -1, document.getElementById(cate_selected).textContent);
 }
 
 document.getElementById("openMenu").onclick = function() {

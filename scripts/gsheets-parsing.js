@@ -40,7 +40,7 @@ request.onload = function() {
 
     musicbook = addOrdered;
     
-    populateSection(musicbook, 1, "전체"); 
+    populateSection(musicbook, -1, "전체"); 
 }
 
 function categorize(jsonObj) {
