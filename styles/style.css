@@ -400,12 +400,14 @@ i#menu-icon {
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-evenly;
-    /* height: var(--chakra-sizes-20); */
+    /* height: var(--chakra-sizes-60); */
     margin-inline-start: var(--chakra-space-8);
     margin-inline-end: var(--chakra-space-8);
     margin-top: var(--chakra-space-8);
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
-.profile-pic {
+#profile-pic {
     border-radius: 50rem;
     width: 10rem;
 }
