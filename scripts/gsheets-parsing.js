@@ -63,30 +63,35 @@ function categorize(jsonObj) {
     }
     categories = JSON.parse(JSON.stringify(tmp_category));
 
-    for (var i = 0; i < categories.length; i++) {
-        var myDiv = document.createElement('div');
-        var cateName = document.createElement('button');
-        cateName.textContent = categories[i];
+    var cateDiv = document.createElement('div');
+    cateDiv.classList.add("category-select");
+    category.appendChild(cateDiv);
 
-        myDiv.classList.add("category-div");
-        cateName.classList.add("cate-name");
+    for (var i = 0; i < categories.length; i++) {
+        var cateName = document.createElement('button');
+        var cateString = document.createElement('formatted-string');
+
+        cateString.textContent = categories[i];
+        cateString.classList.add("selCategory");
+        cateName.appendChild(cateString);
+
+        cateName.classList.add("category-button");
         cateName.setAttribute("id", "category-" + i);
 
-        myDiv.appendChild(cateName);
-
-        category.appendChild(myDiv);
+        cateDiv.appendChild(cateName);
     }
-    cate_selected = "category-0";
-    document.getElementById("category-0").parentElement.classList.add("cate-selected");
 
-    var cate_click = document.getElementsByClassName("cate-name");
+    cate_selected = "category-0";
+    document.getElementById("category-0").classList.add("button-selected");
+
+    var cate_click = document.getElementsByClassName("category-button");
     console.log(cate_click);
     for (var i = 0; i < cate_click.length; i++) {
         console.log(cate_click[i]);
         cate_click[i].onclick = function() { 
             // console.log(this);
-            document.getElementById(cate_selected).parentElement.classList.remove("cate-selected");
-            document.getElementById(this.id).parentElement.classList.add("cate-selected");
+            document.getElementById(cate_selected).classList.remove("button-selected");
+            document.getElementById(this.id).classList.add("button-selected");
             cate_selected = this.id;
             console.log(cate_selected);
             populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
@@ -136,8 +141,8 @@ function populateSection(jsonObj, direction, cate_sel) {
         var coverImg = document.createElement('img');
 
         var infoDiv = document.createElement('div');
-        var infoSong = document.createElement('h2');
-        var infoSinger = document.createElement('p');
+        var infoSong = document.createElement('formatted-string');
+        var infoSinger = document.createElement('formatted-string');
 
         myDiv.classList.add("song-div");
         

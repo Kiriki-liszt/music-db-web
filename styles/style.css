@@ -1,172 +1,220 @@
 @font-face {
-    font-family: 'RIDIBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'RIDIBatang';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Cafe24Shiningstar';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Cafe24Shiningstar';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Pretendard-Thin';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-ExtraLight';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-Light';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-Medium';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-SemiBold';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-Bold';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-ExtraBold';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+			@font-face {
+	font-family: 'Pretendard-Black';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'GmarketSansMedium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 :root {
-    --main-bg-color: #E4E3E3;
-    --primary-color: #fed136;
-    --white-color: #ffffff;
-    --black-color: #000000;
-    --font-sans: 'Pretendard-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-serif: 'RIDIBatang', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-script: 'Cafe24Shiningstar', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-heading: 'GmarketSansMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --chakra-fontSizes-xs: 0.75rem;
-    --chakra-fontSizes-sm: 0.875rem;
-    --chakra-fontSizes-md: 1rem;
-    --chakra-fontSizes-lg: 1.125rem;
-    --chakra-fontSizes-xl: 1.25rem;
-    --chakra-fontSizes-2xl: 1.5rem;
-    --chakra-fontSizes-3xl: 1.875rem;
-    --chakra-fontSizes-4xl: 2.25rem;
-    --chakra-fontSizes-5xl: 3rem;
-    --chakra-fontSizes-6xl: 3.75rem;
-    --chakra-fontSizes-7xl: 4.5rem;
-    --chakra-fontSizes-8xl: 6rem;
-    --chakra-fontSizes-9xl: 8rem;
-    --chakra-letterSpacings-tighter: -0.05em;
-    --chakra-letterSpacings-tight: -0.025em;
-    --chakra-letterSpacings-normal: 0;
-    --chakra-letterSpacings-wide: 0.025em;
-    --chakra-letterSpacings-wider: 0.05em;
-    --chakra-letterSpacings-widest: 0.1em;
-    --chakra-lineHeights-3: 0.75rem;
-    --chakra-lineHeights-4: 1rem;
-    --chakra-lineHeights-5: 1.25rem;
-    --chakra-lineHeights-6: 1.5rem;
-    --chakra-lineHeights-7: 1.75rem;
-    --chakra-lineHeights-8: 2rem;
-    --chakra-lineHeights-9: 2.25rem;
-    --chakra-lineHeights-10: 2.5rem;
-    --chakra-lineHeights-normal: normal;
-    --chakra-lineHeights-none: 1;
-    --chakra-lineHeights-shorter: 1.25;
-    --chakra-lineHeights-short: 1.375;
-    --chakra-lineHeights-base: 1.5;
-    --chakra-lineHeights-tall: 1.625;
-    --chakra-lineHeights-taller: 2;
-    --chakra-radii-none: 0;
-    --chakra-radii-sm: 0.125rem;
-    --chakra-radii-base: 0.25rem;
-    --chakra-radii-md: 0.375rem;
-    --chakra-radii-lg: 0.5rem;
-    --chakra-radii-xl: 0.75rem;
-    --chakra-radii-2xl: 1rem;
-    --chakra-radii-3xl: 1.5rem;
-    --chakra-radii-full: 9999px;
-    --chakra-space-1: 0.25rem;
-    --chakra-space-2: 0.5rem;
-    --chakra-space-3: 0.75rem;
-    --chakra-space-4: 1rem;
-    --chakra-space-5: 1.25rem;
-    --chakra-space-6: 1.5rem;
-    --chakra-space-7: 1.75rem;
-    --chakra-space-8: 2rem;
-    --chakra-space-9: 2.25rem;
-    --chakra-space-10: 2.5rem;
-    --chakra-space-12: 3rem;
-    --chakra-space-14: 3.5rem;
-    --chakra-space-16: 4rem;
-    --chakra-space-20: 5rem;
-    --chakra-space-24: 6rem;
-    --chakra-space-28: 7rem;
-    --chakra-space-32: 8rem;
-    --chakra-space-36: 9rem;
-    --chakra-space-40: 10rem;
-    --chakra-space-44: 11rem;
-    --chakra-space-48: 12rem;
-    --chakra-space-52: 13rem;
-    --chakra-space-56: 14rem;
-    --chakra-space-60: 15rem;
-    --chakra-space-64: 16rem;
-    --chakra-space-72: 18rem;
-    --chakra-space-80: 20rem;
-    --chakra-space-96: 24rem;
-    --chakra-space-px: 1px;
-    --chakra-space-0-5: 0.125rem;
-    --chakra-space-1-5: 0.375rem;
-    --chakra-space-2-5: 0.625rem;
-    --chakra-space-3-5: 0.875rem;
-    --chakra-sizes-1: 0.25rem;
-    --chakra-sizes-2: 0.5rem;
-    --chakra-sizes-3: 0.75rem;
-    --chakra-sizes-4: 1rem;
-    --chakra-sizes-5: 1.25rem;
-    --chakra-sizes-6: 1.5rem;
-    --chakra-sizes-7: 1.75rem;
-    --chakra-sizes-8: 2rem;
-    --chakra-sizes-9: 2.25rem;
-    --chakra-sizes-10: 2.5rem;
-    --chakra-sizes-12: 3rem;
-    --chakra-sizes-14: 3.5rem;
-    --chakra-sizes-16: 4rem;
-    --chakra-sizes-20: 5rem;
-    --chakra-sizes-24: 6rem;
-    --chakra-sizes-28: 7rem;
-    --chakra-sizes-32: 8rem;
-    --chakra-sizes-36: 9rem;
-    --chakra-sizes-40: 10rem;
-    --chakra-sizes-44: 11rem;
-    --chakra-sizes-48: 12rem;
-    --chakra-sizes-52: 13rem;
-    --chakra-sizes-56: 14rem;
-    --chakra-sizes-60: 15rem;
-    --chakra-sizes-64: 16rem;
-    --chakra-sizes-72: 18rem;
-    --chakra-sizes-80: 20rem;
-    --chakra-sizes-96: 24rem;
-    --chakra-sizes-px: 1px;
-    --chakra-sizes-0-5: 0.125rem;
-    --chakra-sizes-1-5: 0.375rem;
-    --chakra-sizes-2-5: 0.625rem;
-    --chakra-sizes-3-5: 0.875rem;
-    --chakra-sizes-max: max-content;
-    --chakra-sizes-min: min-content;
-    --chakra-sizes-full: 100%;
-    --chakra-sizes-3xs: 14rem;
-    --chakra-sizes-2xs: 16rem;
-    --chakra-sizes-xs: 20rem;
-    --chakra-sizes-sm: 24rem;
-    --chakra-sizes-md: 28rem;
-    --chakra-sizes-lg: 32rem;
-    --chakra-sizes-xl: 36rem;
-    --chakra-sizes-2xl: 42rem;
-    --chakra-sizes-3xl: 48rem;
-    --chakra-sizes-4xl: 56rem;
-    --chakra-sizes-5xl: 64rem;
-    --chakra-sizes-6xl: 72rem;
-    --chakra-sizes-7xl: 80rem;
-    --chakra-sizes-8xl: 90rem;
-    --chakra-sizes-container-sm: 640px;
-    --chakra-sizes-container-md: 768px;
-    --chakra-sizes-container-lg: 1024px;
-    --chakra-sizes-container-xl: 1280px;
+	--main-bg-color: #E4E3E3;
+	--primary-color: #fed136;
+	--white-color: #ffffff;
+	--black-color: #000000;
+	--font-sans: 'Pretendard-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-serif: 'RIDIBatang', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-script: 'Cafe24Shiningstar', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-heading: 'GmarketSansMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--breakpoint-xs: 0;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+	--chakra-fontSizes-xs: 0.75rem;
+	--chakra-fontSizes-sm: 0.875rem;
+	--chakra-fontSizes-md: 1rem;
+	--chakra-fontSizes-lg: 1.125rem;
+	--chakra-fontSizes-xl: 1.25rem;
+	--chakra-fontSizes-2xl: 1.5rem;
+	--chakra-fontSizes-3xl: 1.875rem;
+	--chakra-fontSizes-4xl: 2.25rem;
+	--chakra-fontSizes-5xl: 3rem;
+	--chakra-fontSizes-6xl: 3.75rem;
+	--chakra-fontSizes-7xl: 4.5rem;
+	--chakra-fontSizes-8xl: 6rem;
+	--chakra-fontSizes-9xl: 8rem;
+	--chakra-letterSpacings-tighter: -0.05em;
+	--chakra-letterSpacings-tight: -0.025em;
+	--chakra-letterSpacings-normal: 0;
+	--chakra-letterSpacings-wide: 0.025em;
+	--chakra-letterSpacings-wider: 0.05em;
+	--chakra-letterSpacings-widest: 0.1em;
+	--chakra-lineHeights-3: 0.75rem;
+	--chakra-lineHeights-4: 1rem;
+	--chakra-lineHeights-5: 1.25rem;
+	--chakra-lineHeights-6: 1.5rem;
+	--chakra-lineHeights-7: 1.75rem;
+	--chakra-lineHeights-8: 2rem;
+	--chakra-lineHeights-9: 2.25rem;
+	--chakra-lineHeights-10: 2.5rem;
+	--chakra-lineHeights-normal: normal;
+	--chakra-lineHeights-none: 1;
+	--chakra-lineHeights-shorter: 1.25;
+	--chakra-lineHeights-short: 1.375;
+	--chakra-lineHeights-base: 1.5;
+	--chakra-lineHeights-tall: 1.625;
+	--chakra-lineHeights-taller: 2;
+	--chakra-radii-none: 0;
+	--chakra-radii-sm: 0.125rem;
+	--chakra-radii-base: 0.25rem;
+	--chakra-radii-md: 0.375rem;
+	--chakra-radii-lg: 0.5rem;
+	--chakra-radii-xl: 0.75rem;
+	--chakra-radii-2xl: 1rem;
+	--chakra-radii-3xl: 1.5rem;
+	--chakra-radii-full: 9999px;
+	--chakra-space-1: 0.25rem;
+	--chakra-space-2: 0.5rem;
+	--chakra-space-3: 0.75rem;
+	--chakra-space-4: 1rem;
+	--chakra-space-5: 1.25rem;
+	--chakra-space-6: 1.5rem;
+	--chakra-space-7: 1.75rem;
+	--chakra-space-8: 2rem;
+	--chakra-space-9: 2.25rem;
+	--chakra-space-10: 2.5rem;
+	--chakra-space-12: 3rem;
+	--chakra-space-14: 3.5rem;
+	--chakra-space-16: 4rem;
+	--chakra-space-20: 5rem;
+	--chakra-space-24: 6rem;
+	--chakra-space-28: 7rem;
+	--chakra-space-32: 8rem;
+	--chakra-space-36: 9rem;
+	--chakra-space-40: 10rem;
+	--chakra-space-44: 11rem;
+	--chakra-space-48: 12rem;
+	--chakra-space-52: 13rem;
+	--chakra-space-56: 14rem;
+	--chakra-space-60: 15rem;
+	--chakra-space-64: 16rem;
+	--chakra-space-72: 18rem;
+	--chakra-space-80: 20rem;
+	--chakra-space-96: 24rem;
+	--chakra-space-px: 1px;
+	--chakra-space-0-5: 0.125rem;
+	--chakra-space-1-5: 0.375rem;
+	--chakra-space-2-5: 0.625rem;
+	--chakra-space-3-5: 0.875rem;
+	--chakra-sizes-1: 0.25rem;
+	--chakra-sizes-2: 0.5rem;
+	--chakra-sizes-3: 0.75rem;
+	--chakra-sizes-4: 1rem;
+	--chakra-sizes-5: 1.25rem;
+	--chakra-sizes-6: 1.5rem;
+	--chakra-sizes-7: 1.75rem;
+	--chakra-sizes-8: 2rem;
+	--chakra-sizes-9: 2.25rem;
+	--chakra-sizes-10: 2.5rem;
+	--chakra-sizes-12: 3rem;
+	--chakra-sizes-14: 3.5rem;
+	--chakra-sizes-16: 4rem;
+	--chakra-sizes-20: 5rem;
+	--chakra-sizes-24: 6rem;
+	--chakra-sizes-28: 7rem;
+	--chakra-sizes-32: 8rem;
+	--chakra-sizes-36: 9rem;
+	--chakra-sizes-40: 10rem;
+	--chakra-sizes-44: 11rem;
+	--chakra-sizes-48: 12rem;
+	--chakra-sizes-52: 13rem;
+	--chakra-sizes-56: 14rem;
+	--chakra-sizes-60: 15rem;
+	--chakra-sizes-64: 16rem;
+	--chakra-sizes-72: 18rem;
+	--chakra-sizes-80: 20rem;
+	--chakra-sizes-96: 24rem;
+	--chakra-sizes-px: 1px;
+	--chakra-sizes-0-5: 0.125rem;
+	--chakra-sizes-1-5: 0.375rem;
+	--chakra-sizes-2-5: 0.625rem;
+	--chakra-sizes-3-5: 0.875rem;
+	--chakra-sizes-max: max-content;
+	--chakra-sizes-min: min-content;
+	--chakra-sizes-full: 100%;
+	--chakra-sizes-3xs: 14rem;
+	--chakra-sizes-2xs: 16rem;
+	--chakra-sizes-xs: 20rem;
+	--chakra-sizes-sm: 24rem;
+	--chakra-sizes-md: 28rem;
+	--chakra-sizes-lg: 32rem;
+	--chakra-sizes-xl: 36rem;
+	--chakra-sizes-2xl: 42rem;
+	--chakra-sizes-3xl: 48rem;
+	--chakra-sizes-4xl: 56rem;
+	--chakra-sizes-5xl: 64rem;
+	--chakra-sizes-6xl: 72rem;
+	--chakra-sizes-7xl: 80rem;
+	--chakra-sizes-8xl: 90rem;
+	--chakra-sizes-container-sm: 640px;
+	--chakra-sizes-container-md: 768px;
+	--chakra-sizes-container-lg: 1024px;
+	--chakra-sizes-container-xl: 1280px;
 }
 
 :root {
@@ -175,74 +223,63 @@
 	--color-com:		#fafafa;
 	--bg-color: 		rgba(36, 36, 36, 0.9);
 	--color-1:			#D8E3EE;
-    --falling-slowly:	20s;
+	--falling-slowly:	20s;
 }
 
 
+
+
+
+html {
+	font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
+	font-family: var(--font-sans);
+	/* background-color: var(--main-bg-color); */
+	text-size-adjust: 100%;
+	/* --vh: 722px; */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera*/
+}
 html, html.darkmode {
 	/* background: 	linear-gradient(to bottom, #d5abff, #e2c4ff); */		/* 배경화면을 그라디언트로 할 때 */
 	height:					auto !important;			/* 높이가 무조건 자동으로 늘어나도록 설정 */
-	-webkit-animation:		bg_morph 10s infinite;
-	   -moz-animation:		bg_morph 10s infinite;
-			animation:		bg_morph 10s infinite;
+	background:	var(--bg_color-start);
+	
 }
-@keyframes bg_morph {									/* 색을 시간에 따라 변하게 할 때 */
-    0%      { background:	var(--bg_color-start); }	/* 시작하는 색 */
-    50%     { background:	var(--bg_color-end);   }	/* 중간 색 */
-    100%    { background:	var(--bg_color-start); }	/* 끝나는 색 == 시작하는 색 */
+@media screen and (max-width: 1020px) {
+	html {
+		font-size: 12px;
+	}
 }
-@-moz-keyframes bg_morph {								/* 밑에 두 개는 위에거랑 같게 유지 */
-    0%      { background:	var(--bg_color-start); }
-    50%     { background:	var(--bg_color-end);   }
-    100%    { background:	var(--bg_color-start); }
-}
-@-webkit-keyframes bg_morph {
-    0%      { background:	var(--bg_color-start); }
-    50%     { background:	var(--bg_color-end);   }
-    100%    { background:	var(--bg_color-start); }
+
+
+
+body {
+	/*width: 600px;*/
+	margin: 0 auto;
+	/* background-color: #E4E3E3; */
 }
 
 /*  눈내리자  */
 body, html.darkmode body {
-    background: 		transparent;
-    height: 			auto;
-	background-image:	url("https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png"), 
-						url("https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png"), 
-						url("https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png");
-						/* 사진 사이즈 - snow:500x500, snow3:400x400, snow2:300x300 */
-    -webkit-animation:	snow var(--falling-slowly) linear infinite;
-	   -moz-animation:	snow var(--falling-slowly) linear infinite;
-            animation:	snow var(--falling-slowly) linear infinite;
+/**/
 }
-@keyframes snow {		/* 이미지 움직이는 경로. px들 순서는 x, y값. 쉼표는 url 불러온 순서대로. */
-	0%			{ background-position:	0px 0px,		0px 0px,		0px 0px;		}
-	50%			{ background-position:	30px 250px,		200px 200px,	150px 150px;	}
-	100%		{ background-position:	0px 500px,		400px 400px,	300px 300px;	}
-}
-@-moz-keyframes snow {
-	0%			{ background-position:	0px 0px,		0px 0px,		0px 0px;		}
-	50%			{ background-position:	30px 250px,		200px 200px,	150px 150px;	}
-	100%		{ background-position:	0px 500px,		400px 400px,	300px 300px;	}
-}
-@-webkit-keyframes snow {
-	0%			{ background-position:	0px 0px,		0px 0px,		0px 0px;		}
-	50%			{ background-position:	30px 250px,		200px 200px,	150px 150px;	}
-	100%		{ background-position:	0px 500px,		400px 400px,	300px 300px;	}
-}
-
 body {
   overflow-x: hidden;
 }
 
 p {
   line-height: 1.75;
+  color: white;
 }
 
 a {
-  color: var(--primary-color);
+	color: var(--primary-color);
 }
 a:hover {
-    color: darken(var(--primary-color), 10%);
+	color: darken(var(--primary-color), 10%);
 }
 
 
@@ -258,433 +295,542 @@ h5,
 h6 {
   font-weight: 700;
   font-family: var(--font-heading);
+  font-size: 2em;
 }
 
-
-
-
-html {
-    font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
-    font-family: var(--font-sans);
-    /* background-color: var(--main-bg-color); */
-    text-size-adjust: 100%;
-    /* --vh: 722px; */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
-}
-
-body {
-    /*width: 600px;*/
-    margin: 0 auto;
-    /* background-color: #E4E3E3; */
-}
-
-h1 {
-    font-size: 30px;
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-}
 
 p, li {
-    font-size: 1.2em !important;
-    line-height: 2;
-    letter-spacing: 1px;
+	letter-spacing: var(--chakra-letterSpacings-wide);
+	margin: var(--chakra-space-0-5);
+	font-family: 'Pretendard-ExtraLight';
+}
+li {
+	/*margin: 0 0 0 24px;*/
+	text-align: left;
+	color: white;
+}
+ul {
+	display: flex;
+	flex-direction: column;
+	list-style: disc outside;
+	margin: 0 0 24px;
+	padding: var(--chakra-space-2);
 }
 
 img {
-    border-style: none;
+	border-style: none;
 }
 img, video {
-    max-width: 100%;
-    height: auto;
+	/* max-width: 100%; */
+	height: auto;
 }
 img, svg, video, canvas, audio, iframe, embed, object {
-    display: block;
+	display: block;
 }
 button, input, optgroup, select, textarea {
-    padding: 0px;
-    line-height: inherit;
-    color: inherit;
+	padding: 0px;
+	line-height: inherit;
+	color: inherit;
 }
 button, input {
-    overflow: visible;
+	overflow: visible;
 }
 button, input, optgroup, select, textarea {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0px;
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0px;
 }
 *, ::before, ::after {
-    border-width: 0px;
-    border-style: solid;
-    box-sizing: border-box;
+	border-width: 0px;
+	border-style: solid;
+	box-sizing: border-box;
 }
 
-.upper {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    margin-left: 0px;
-    padding-inline-start: var(--chakra-space-4);
-    padding-inline-end: var(--chakra-space-4);
-    height: var(--chakra-sizes-20);
-    background: rgba(0,0,0,.5);
-    color: aliceblue;
-    border-bottom-width: 1px;
-    border-bottom-color: var(--chakra-colors-gray-200);
-}
+
+
+
+
+
+
+
 .upper-head {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.intro-section-title {
+	font-family: 'GmarketSansMedium';
+	font-size: var(--chakra-fontSizes-5xl);
+}
+.upper {
+	display: none;
+	margin-left: var(--chakra-space-60);
+	padding-inline-start: var(--chakra-space-24);
+	padding-inline-end: var(--chakra-space-24);
 }
 .menu-button {
-    display: inline-flex;
-    appearance: none;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    user-select: none;
-    position: relative;
-    white-space: nowrap;
-    vertical-align: middle;
-    outline: transparent solid 2px;
-    outline-offset: 2px;
-    width: auto;
-    line-height: 1.2;
-    border-radius: var(--chakra-radii-md);
-    font-weight: 900;
-    height: var(--chakra-sizes-10);
-    min-width: var(--chakra-sizes-10);
-    font-size: var(--chakra-fontSizes-lg);
-    padding-inline-start: var(--chakra-space-4);
-    padding-inline-end: var(--chakra-space-4);
-    border-width: 1px;
-    border-style: solid;
-    border-image: initial;
-    color: inherit;
-    padding: 0px;
+	display: inline-flex;
+	appearance: none;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	user-select: none;
+	position: relative;
+	white-space: nowrap;
+	vertical-align: middle;
+	outline: transparent solid 2px;
+	outline-offset: 2px;
+	width: auto;
+	line-height: 1.2;
+	border-radius: var(--chakra-radii-md);
+	font-weight: 900;
+	height: var(--chakra-sizes-10);
+	min-width: var(--chakra-sizes-10);
+	font-size: var(--chakra-fontSizes-lg);
+	padding-inline-start: var(--chakra-space-4);
+	padding-inline-end: var(--chakra-space-4);
+	border-width: 1px;
+	border-style: solid;
+	border-image: initial;
+	color: inherit;
+	padding: 0px;
 }
 i#menu-icon {
-    font-size: 1.5rem;
-    color: black;
+	font-size: 1.5rem;
+	color: black;
 }
 
 .left {
-    width: var(--chakra-sizes-md);
-    height: var(--chakra-sizes-full);
-    background: rgba(0,0,0,.9);
-    color: aliceblue;
-    position: fixed;
-    display: block;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    z-index: 9100;
-    padding-bottom: 5px;
-    transform: translateX(0px);
-    transition: transform 0.5s cubic-bezier(.9,-0.3,.1,1.3);
+	width: var(--chakra-sizes-md);
+	height: var(--chakra-sizes-full);
+	background: rgba(0,0,0,.9);
+	color: aliceblue;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	z-index: 9100;
+	padding-bottom: 5px;
+	transform: translateX(0px);
+	transition: transform 0.5s cubic-bezier(.9,-0.3,.1,1.3);
 }
 .left-hide {
-    display: block !important;
-    transform: translateX(calc(-1rem - var(--chakra-sizes-md)));
+	/*display: block !important;*/
+	/*transform: translateX(calc(-1rem - var(--chakra-sizes-md)));*/
+}
+@media screen and (max-width: 1020px) { 
+	.left-hide {
+		/*display: block !important;*/
+		transform: translateX(calc(-1rem - var(--chakra-sizes-md)));
+	}
 }
 .left-head {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-evenly;
-    /* height: var(--chakra-sizes-60); */
-    margin-inline-start: var(--chakra-space-8);
-    margin-inline-end: var(--chakra-space-8);
-    margin-top: var(--chakra-space-8);
-    flex-direction: column;
-    flex-wrap: nowrap;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-evenly;
+	/* height: var(--chakra-sizes-60); */
+	margin-inline-start: var(--chakra-space-8);
+	margin-inline-end: var(--chakra-space-8);
+	margin-top: var(--chakra-space-8);
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 #profile-pic {
-    border-radius: 50rem;
-    width: 10rem;
+	border-radius: 50rem;
+	width: 10rem;
 }
 .left-search {
-    display: flex;
-    margin-inline-start: var(--chakra-space-8);
-    margin-inline-end: var(--chakra-space-8);
-    margin-bottom: var(--chakra-sizes-5);
+	display: flex;
+	margin-inline-start: var(--chakra-space-8);
+	margin-inline-end: var(--chakra-space-8);
+	margin-bottom: var(--chakra-sizes-5);
 }
 .left-search-box {
-    width: 100%;
-    display: flex;
-    position: relative;
+	width: 100%;
+	display: flex;
+	position: relative;
 }
 .left-search-icon {
-    left: 0px;
-    width: var(--chakra-sizes-10);
-    height: var(--chakra-sizes-10);
-    font-size: var(--chakra-fontSizes-md);
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    pointer-events: none;
+	left: 0px;
+	width: var(--chakra-sizes-10);
+	height: var(--chakra-sizes-10);
+	font-size: var(--chakra-fontSizes-md);
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	pointer-events: none;
 }
 .left-search-text {
-    width: 100%;
-    min-width: 0px;
-    outline: transparent solid 2px;
-    outline-offset: 2px;
-    position: relative;
-    appearance: none;
-    transition-property: var(--chakra-transition-property-common);
-    transition-duration: var(--chakra-transition-duration-normal);
-    font-size: var(--chakra-fontSizes-md);
-    padding-inline-start: var(--chakra-space-10);
-    padding-inline-end: var(--chakra-space-4);
-    height: var(--chakra-sizes-10);
-    border-radius: var(--chakra-radii-md);
-    border-width: 1px;
-    border-style: solid;
-    border-image: initial;
-    border-color: inherit;
-    background: inherit;
-}
-.left-buttons {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: var(--chakra-sizes-3);
-    border-style: solid;
-    border-width: var(--chakra-sizes-1);
-    border-color: #6B46C1;
-    border-radius: var(--chakra-radii-md);
-}
-.sort-button {
-    display: inline-flex;
-    appearance: none;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    user-select: none;
-    position: relative;
-    white-space: nowrap;
-    vertical-align: middle;
-    outline: transparent solid 2px;
-    outline-offset: 2px;
-    width: auto;
-    line-height: 1.2;
-    border-radius: var(--chakra-radii-md);
-    font-weight: var(--chakra-fontWeights-semibold);
-    transition-property: var(--chakra-transition-property-common);
-    transition-duration: var(--chakra-transition-duration-normal);
-    height: var(--chakra-sizes-8);
-    min-width: var(--chakra-sizes-8);
-    font-size: var(--chakra-fontSizes-xl);
-    padding-inline-start: var(--chakra-space-3);
-    padding-inline-end: var(--chakra-space-3);
-    background: var(--chakra-colors-transparent);
-}
-.button-selected {
-    color: #6B46C1;
-    background: var(--chakra-colors-transparent);
+	width: 100%;
+	min-width: 0px;
+	outline: transparent solid 2px;
+	outline-offset: 2px;
+	position: relative;
+	appearance: none;
+	transition-property: var(--chakra-transition-property-common);
+	transition-duration: var(--chakra-transition-duration-normal);
+	font-size: var(--chakra-fontSizes-md);
+	padding-inline-start: var(--chakra-space-10);
+	padding-inline-end: var(--chakra-space-4);
+	height: var(--chakra-sizes-10);
+	border-radius: var(--chakra-radii-md);
+	border-width: 1px;
+	border-style: solid;
+	border-image: initial;
+	border-color: inherit;
+	background: inherit;
 }
 .left-text {
-    margin-inline-start: var(--chakra-space-8);
-    margin-inline-end: var(--chakra-space-8);
-}
-.category-list {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: var(--chakra-sizes-3);
-}
-.category-div {
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    user-select: none;
-    position: relative;
-    white-space: nowrap;
-    vertical-align: middle;
-    outline: transparent solid 2px;
-    outline-offset: 2px;
-    width: auto;
-    height: var(--chakra-lineHeights-tall);
-    border-radius: var(--chakra-radii-md);
-    border-style: solid;
-    border-width: var(--chakra-sizes-1);
-    min-width: var(--chakra-sizes-40);
-    font-size: var(--chakra-fontSizes-xl);
-    padding-inline-start: var(--chakra-space-3);
-    padding-inline-end: var(--chakra-space-3);
-    background: transparent;
-    font-family: var(--font-heading);
-    margin: var(--chakra-sizes-2);
-}
-.cate-name {
-    background: transparent;
-    line-height: var(--chakra-lineHeights-tall);
-    height: var(--chakra-lineHeights-tall);
-    margin-top: 0.3rem;
-}
-.cate-selected {
-    color: #6B46C1;
-    background: var(--chakra-colors-transparent);
+	margin-inline-start: var(--chakra-space-8);
+	margin-inline-end: var(--chakra-space-8);
 }
 
 
+
+
+
+
+
+
+/**********       Buttons        ***********/
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-width: 32px;
+	border: 1px solid rgba(255,255,255,0.1);
+	color: #030303;
+	--yt-endpoint-hover-color: #030303;
+	background: rgba(255,255,255,0.1);
+	color: #fff;
+	border-radius: 8px;
+	border: none;
+	height: 36px;
+	margin: var(--chakra-space-1-5);
+}
+button:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+.clickable {
+	cursor: pointer;
+}
+@media screen and (max-width: 1020px) { 
+	button {
+		height: 24px;
+	}
+}
+
+.category-button {
+	line-height: var(--chakra-lineHeights-tall);
+	height: var(--chakra-lineHeights-tall);
+	margin-top: 0.3rem;
+	width: calc( ( var(--chakra-space-96) - 5rem ) / 2);
+	margin: var(--chakra-space-1-5);
+}
+.genre-button {
+	margin: var(--chakra-space-1-5);
+}
+.sort-button {
+	margin: 0;
+	background: none;
+}
+
+/**********   Button Texts    ***********/
+.selCategory {
+	font-family: 'Pretendard-Regular';
+	font-size: var(--chakra-fontSizes-xl);
+	margin: 0 12px;
+}
+.selGenre {
+	font-family: 'Pretendard-semiBold';
+	font-size: var(--chakra-fontSizes-2xl);
+	margin: 0 12px;
+	white-space: nowrap;
+}
+.selSort {
+	font-family: 'Pretendard-Regular';
+	font-size: var(--chakra-fontSizes-xl);
+	margin: 0 12px;
+	white-space: nowrap;
+}
+@media screen and (max-width: 1020px) { 
+	.selCategory {
+		font-family: 'Pretendard-Regular';
+		font-size: var(--chakra-fontSizes-sm);
+		margin: 0 2px;
+	}
+	.selGenre {
+		font-family: 'Pretendard-semiBold';
+		font-size: var(--chakra-fontSizes-md);
+		margin: 0 2px;
+		white-space: nowrap;
+	}
+	.selSort {
+		font-family: 'Pretendard-Regular';
+		font-size: var(--chakra-fontSizes-sm);
+		margin: 0 2px;
+		white-space: nowrap;
+	}
+}
+/* Button Selected */
+.button-selected {
+	color: black;
+	background: white;
+}
+.button-selected:hover {
+	color: black;
+	background: white;
+}
+
+/**********     Button Wrapper       ***********/
+.category-select {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: var(--chakra-sizes-3);
+}
+.genre-select {
+	display: flex;
+}
+.sort-select {
+	display: flex;
+	border-radius: var(--chakra-radii-2xl);
+	background: rgba(255,255,255,0.1);
+	color: #fff;
+}
+
+
+
+
+
+
+.main-content {
+	display: flex; 
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin-left: var(--chakra-sizes-md);
+	--ytmusic-guide-width: var(--chakra-sizes-md);
+	--ytmusic-content-width: min( calc( 100vw - 200px - var(--ytmusic-guide-width) ), 1478px );
+}
+.intro-content {
+	color: white;
+	font-family: 'Pretendard-Light';
+	font-size: var(--chakra-fontSizes-xl);
+	line-height: 1.6rem;
+}
+.intro-section {
+	width: calc(var(--chakra-sizes-96) - 5rem);
+}
+.content-group {
+	width: var(--ytmusic-content-width);
+	margin: 0 auto;
+	font-size: 1.2rem;
+}
+.selector {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+
+
+.header-gruop {
+	display: flex; 
+	flex-direction: column;
+	align-items: flex-start;
+	color: white;
+	margin: 0 auto;
+	max-width: var(--ytmusic-content-width);
+}
+.main-list-title, .random-list-title {
+	font-size: var(--chakra-fontSizes-5xl);
+}
+@media screen and (max-width: 1020px) { 
+	.main-list-title, .random-list-title {
+		font-size: var(--chakra-fontSizes-4xl);
+	}
+}
 .music-list {
-    display: flex; 
-    flex-flow: row wrap; 
-    -webkit-box-pack: center; 
-    justify-content: center;
-    margin-left: 0px;
-    padding: var(--chakra-space-4);
+	display: flex; 
+	flex-flow: row wrap; 
+	-webkit-box-pack: center; 
+	justify-content: center;
+	margin-left: 0px;
+	padding: var(--chakra-space-4);
 }
 .song-div {
-    background: whitesmoke; 
-    width: 12%;
-    min-width: 110px;
-    max-width: 170px;
-    box-shadow: var(--chakra-shadows-sm);
-    margin: var(--chakra-space-2);
-    border-radius: var( --chakra-radii-lg);
+	background: #202020; 
+	color: white;
+	width: calc( ( var(--ytmusic-content-width) ) / 3 );
+	margin: var(--chakra-space-2);
+	box-shadow: var(--chakra-shadows-sm);
+	border-radius: var( --chakra-radii-lg);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+@media screen and (max-width: 1020px) { 
+	.song-div {
+		width: calc( ( var(--ytmusic-content-width) - 12px) );
+	}
 }
 .album-cover-div {
-    position: relative; 
-    margin: var(--chakra-sizes-2);
+	position: relative; 
+	margin: var(--chakra-space-2);
+	width: var(--chakra-sizes-36);
+	height: var(--chakra-sizes-36);
 }
-.album-cover-div::before {
-    height: 0px;
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+@media screen and (max-width: 1020px) { 
+	.album-cover-div {
+		width: var(--chakra-sizes-24);
+		height: var(--chakra-sizes-24);
+	}
 }
 .album-cover-img {
-    border-radius: var( --chakra-radii-lg);
-    object-fit: cover;
-    overflow: hidden;
-    position: absolute;
-    inset: 0px;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+	border-radius: var( --chakra-radii-lg);
+	object-fit: cover;
+	overflow: hidden;
+	position: absolute;
+	/* width: var(--chakra-space-36);
+	height: var(--chakra-space-36); */
+	width: 100%;
+	height: 100%;
 }
 .info-div {
-    padding: var(--chakra-space-2);
+	padding: var(--chakra-space-2);
+	width:  calc(100% - var(--chakra-sizes-36));
+}
+@media screen and (max-width: 1020px) { 
+	.info-div {
+		width:  calc(100% - var(--chakra-sizes-24));
+	}
 }
 .song-name {
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin: initial;
-    /* display: flex; */
-    -webkit-box-pack: justify;
-    place-content: center space-between;
-    margin-top: var(--chakra-space-1);
-    font-weight: var(--chakra-fontWeights-semibold);
+	font-family: 'Pretendard-semiBold';
+	font-size: var(--chakra-fontSizes-3xl);
+	letter-spacing: var(--chakra-letterSpacings-wide);
+	/*line-height: 1.5rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: initial;*/
+	display: flex;
+	-webkit-box-pack: justify;
+	place-content: center space-between;
+	margin-top: var(--chakra-space-1);
+	min-height: 50%;
+	font-weight: var(--chakra-fontWeights-semibold);
 }
 .singer-name{
-    display: flex;
-    -webkit-box-pack: justify;
-    place-content: center space-between;
-    font-size: 1.2rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin: auto;
+	font-family: 'Pretendard-ExtraLight';
+	font-size: var(--chakra-fontSizes-2xl);
+	display: flex;
+	-webkit-box-pack: justify;
+	place-content: center space-between;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: auto;
+	margin-top: var(--chakra-space-1);
 }
 
 
-/* desktop */
-@media screen and (min-width: 48em) {
-    html {
-        font-size: 12px;
-    }
-    .upper {
-        display: none;
-        margin-left: var(--chakra-space-60);
-        padding-inline-start: var(--chakra-space-24);
-        padding-inline-end: var(--chakra-space-24);
-    }
-    .left {
-        width: var(--chakra-space-96);
-        transform: translateX(0px);
-        display: block !important;
-    }
-    .song-div {
-        min-width: 130px;
-        margin: var(--chakra-space-1-5);
-    }
-    .music-list {
-        margin-left: var(--chakra-space-96);
-    }
+
+/* mobile */
+@media screen and (max-width: 1020px) {
+	.upper {
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		justify-content: space-between;
+		margin-left: 0px;
+		padding-inline-start: var(--chakra-space-4);
+		padding-inline-end: var(--chakra-space-4);
+		height: var(--chakra-sizes-20);
+		background: rgba(0,0,0,.5);
+		color: aliceblue;
+		border-bottom-width: 1px;
+		border-bottom-color: var(--chakra-colors-gray-200);
+	}
+	.left {
+		
+	}
+	.song-div {
+		
+	}
+	.album-cover-img {
+		 
+	}
+	.main-content {
+		margin-left: 0;
+		--ytmusic-guide-width: 0px;
+		--ytmusic-content-width: calc(100vw - 32px - var(--ytmusic-guide-width));
+	}
 }
 
 
 :root {
-    --vh: 100vh;
+	--vh: 100vh;
 }
 
 html, body, #main {
-    height: 100%;
-    min-height: var(--vh);
+	height: 100%;
+	min-height: var(--vh);
 }
 
 #image-grid-wrapper img:hover {
-    border: 4px solid purple;
+	border: 4px solid purple;
 }
 
 #image-grid-wrapper img {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #sortable-wrapper {
-    display: contents;
+	display: contents;
 }
 .handle {
-    cursor: pointer;
+	cursor: pointer;
 }
 .sortable-ghost {
-    background-color: rgba(0,0,255,0.1);
+	background-color: rgba(0,0,255,0.1);
 }
 
 
 /*
 
 p {
-    color: red;
+	color: red;
 }
 
 #my-id {
-    width: 500px;
-    border: 1px solid black;
+	width: 500px;
+	border: 1px solid black;
 }
 
 .my-class {
-    color: blue;
+	color: blue;
 }
 */
 

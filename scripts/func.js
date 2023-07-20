@@ -34,6 +34,36 @@ function sortAdded() {
     populateSection(musicbook, -1, document.getElementById(cate_selected).textContent);
 }
 
+function clicked() {
+    console.log(document.getElementsByClassName("genre-button"));
+    var prev_sel = document.getElementsByClassName("genre-button");
+    for( var i = 0; i < prev_sel.length; i++ ){
+        prev_sel.item(i).classList.remove("button-selected");
+    }
+    console.log(this);
+    this.classList.add("button-selected");
+}
+
+var prev_sel = document.getElementsByClassName("genre-button");
+for( var i = 0; i < prev_sel.length; i++ ){
+
+    prev_sel.item(i).addEventListener('click', function () {
+
+        var prev_sel = document.getElementsByClassName("genre-button");
+        if ( this.classList.contains("button-selected") ) {
+            for( var i = 0; i < prev_sel.length; i++ ){
+                prev_sel.item(i).classList.remove("button-selected");
+            }
+        }
+        else {
+            for( var i = 0; i < prev_sel.length; i++ ){
+                prev_sel.item(i).classList.remove("button-selected");
+            }
+            this.classList.add("button-selected");
+        }
+    });
+}
+
 document.getElementById("openMenu").onclick = function() {
     var idLeft = document.getElementById("id-left");
     if (idLeft.classList.contains("left-hide")) {
