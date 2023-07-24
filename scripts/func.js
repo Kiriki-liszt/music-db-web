@@ -1,10 +1,9 @@
 
 var sort_selected = "byAdd";
-var cate_selected = "category-0";
 
 function searchEnter() {
     if (window.event.keyCode==13) {               
-        populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
+        populateSection(musicbook, 1);
     }
 }
 function searchUpdate() {
@@ -17,42 +16,26 @@ function sortSinger() {
     document.getElementById("bySinger").classList.add("button-selected");
     sort_selected = "bySinger";
     musicbook = singerOrdered;
-    populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
+    console.log("sortSinger, musicbook\n", musicbook);
+    populateSection(musicbook, 1);
 }
 function sortSong() {
     document.getElementById(sort_selected).classList.remove("button-selected");
     document.getElementById("bySong").classList.add("button-selected");
     sort_selected = "bySong";
     musicbook = songOrdered;
-    populateSection(musicbook, 1, document.getElementById(cate_selected).textContent);
+    console.log("sortSong, musicbook\n", musicbook);
+    populateSection(musicbook, 1);
 }
 function sortAdded() {
     document.getElementById(sort_selected).classList.remove("button-selected");
     document.getElementById("byAdd").classList.add("button-selected");
     sort_selected = "byAdd";
     musicbook = addOrdered;
-    populateSection(musicbook, -1, document.getElementById(cate_selected).textContent);
+    console.log("sortAdded, musicbook\n", musicbook);
+    populateSection(musicbook, 1);
 }
 
-var prev_sel = document.getElementsByClassName("category-button");
-for( var i = 0; i < prev_sel.length; i++ ){
-
-    prev_sel.item(i).addEventListener('click', function () {
-
-        var prev_sel = document.getElementsByClassName("category-button");
-        if ( this.classList.contains("button-selected") ) {
-            for( var i = 0; i < prev_sel.length; i++ ){
-                prev_sel.item(i).classList.remove("button-selected");
-            }
-        }
-        else {
-            for( var i = 0; i < prev_sel.length; i++ ){
-                prev_sel.item(i).classList.remove("button-selected");
-            }
-            this.classList.add("button-selected");
-        }
-    });
-}
 
 document.getElementById("openMenu").onclick = function() {
     var idLeft = document.getElementById("id-left");

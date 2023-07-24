@@ -249,10 +249,10 @@ formatted-string.introduction-text {
     letter-spacing: var(--chakra-letterSpacings-wider);
 }
 formatted-string.random-list-title {
-	
+	color: white;
 }
 formatted-string.main-list-title {
-	
+	color: white;
 }
 formatted-string.category-text {
 	font-family: 'Pretendard-semiBold';
@@ -357,7 +357,7 @@ button:hover {
 }
 .genre-select {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
 }
@@ -538,6 +538,7 @@ i#menu-icon {
 	margin-top: var(--chakra-space-1);
 	min-height: 50%;
 	font-weight: var(--chakra-fontWeights-semibold);
+	word-break: break-word;
 }
 .random-artist-name {
 	font-family: 'Pretendard-ExtraLight';
@@ -550,6 +551,7 @@ i#menu-icon {
 	white-space: nowrap;
 	margin: auto;
 	margin-top: var(--chakra-space-1);
+	word-break: break-word;
 }
 
 
@@ -734,6 +736,7 @@ genre.genre-list {
 	margin-top: var(--chakra-space-1);
 	min-height: 50%;
 	font-weight: var(--chakra-fontWeights-semibold);
+	word-break: break-word;
 }
 .singer-name{
 	font-family: 'Pretendard-ExtraLight';
@@ -746,6 +749,7 @@ genre.genre-list {
 	white-space: nowrap;
 	margin: auto;
 	margin-top: var(--chakra-space-1);
+	word-break: break-word;
 }
 
 

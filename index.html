@@ -128,23 +128,9 @@
 						<!----------------------------------- 헤더 분류 선택자 -->
 						<div class="selector">
 							<!----------------------------------- 대분류 선택자 -->
-							<div class="category-select">
-								<button type="button" class="category-button clickable">
-									<formatted-string class="category-text">
-										KPOP
-									</formatted-string>
-								</button>
-								<button type="button" class="category-button clickable">
-									<formatted-string class="category-text">
-										JPOP
-									</formatted-string>
-								</button>
-								<button type="button" class="category-button clickable">
-									<formatted-string class="category-text">
-										POP
-									</formatted-string>
-								</button>
-							</div>
+							
+							<category>
+							</category>
 							<!----------------------------------- 정렬 선택자 -->
 							<div class="sort-select">
 								<button type="button" class="sort-button clickable" id="bySinger" onclick="sortSinger();" >
@@ -186,8 +172,8 @@
 				<!----------------------------------- End - 모든 노래, 검색 결과 -->
 
 			</div>
-
-			<script src="scripts/gsheets-parsing.js"></script>
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script src="scripts/google-sheet.js"></script>
 			<script src="scripts/func.js"></script>
 		</div>
 	</body>

@@ -235,3 +235,34 @@ function populateSection(jsonObj, direction, cate_sel) {
     }
 }
 
+
+
+
+
+/*
+
+var prev_sel = document.getElementsByClassName("category-button");
+for( var i = 0; i < prev_sel.length; i++ ){
+
+    prev_sel.item(i).addEventListener('click', function () {
+
+        var prev_sel = document.getElementsByClassName("category-button");
+        if ( this.classList.contains("button-selected") ) {
+            for( var i = 0; i < prev_sel.length; i++ ){
+                prev_sel.item(i).classList.remove("button-selected");
+            }
+            category_selected = "";
+			populateSection(musicbook, 1);
+        }
+        else {
+            for( var i = 0; i < prev_sel.length; i++ ){
+                prev_sel.item(i).classList.remove("button-selected");
+            }
+            this.classList.add("button-selected");
+			category_selected = this.textContent;
+            console.log(category_selected);
+			populateSection(musicbook, 1);
+        }
+    });
+}
+*/
