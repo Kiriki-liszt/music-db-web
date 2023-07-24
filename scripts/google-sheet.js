@@ -6,6 +6,8 @@ var random = document.querySelector('random');
 
 let myKey = "1HPIUuWYeoNAdluPPLx_QsSPTzYvenQ3N4eb-lw1m3AA"; // 스프레드시트 KEY
 
+let noCover = `https://i.namu.wiki/i/66evJzSR1h2ooOwjrx9RPaxSnWRvSsecGuzmXAymJ5RwfjxnUUcjcT-QNwLnxQK-uc6IMqQKoXeZOa9NNWBbOnwuToNshqcgwUbJmfqI-RA6HW6-4VOpadDnksFmHHYvYpqLTWUPrF8W87_3PjXlww.webp`;
+
 var musicbook;
 var addOrdered;
 var singerOrdered;
@@ -216,7 +218,8 @@ function random_select(jsonObj, num) {
 		
 		coverDiv.classList.add("random-cover-div");
 		coverImg.classList.add("random-cover-img");
-		coverImg.src = musiclist[rnd].cover_link;
+		if (musiclist[rnd].cover_link == null) coverImg.src = noCover;
+		else coverImg.src = musiclist[rnd].cover_link;
 
 		infoDiv.classList.add("random-info-div");
 		infoSinger.classList.add("random-artist-name");
@@ -286,7 +289,8 @@ function populateSection(jsonObj, direction) {
 		
 		coverDiv.classList.add("album-cover-div");
 		coverImg.classList.add("album-cover-img");
-		coverImg.src = musiclist[i].cover_link;
+		if (musiclist[i].cover_link == null) coverImg.src = noCover;
+		else coverImg.src = musiclist[i].cover_link;
 
 		infoDiv.classList.add("info-div");
 		infoSinger.classList.add("singer-name");
