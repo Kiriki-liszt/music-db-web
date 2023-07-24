@@ -1,85 +1,8 @@
-@font-face {
-	font-family: 'RIDIBatang';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Cafe24Shiningstar';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Pretendard-Thin';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
-	font-weight: 100;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-ExtraLight';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
-	font-weight: 200;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-Light';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-Regular';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-Medium';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-SemiBold';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-Bold';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-ExtraBold';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
-	font-weight: 800;
-	font-style: normal;
-}
-			@font-face {
-	font-family: 'Pretendard-Black';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'GmarketSansMedium';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
 :root {
 	--main-bg-color: #E4E3E3;
 	--primary-color: #fed136;
 	--white-color: #ffffff;
 	--black-color: #000000;
-	--font-sans: 'Pretendard-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-	--font-serif: 'RIDIBatang', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-	--font-script: 'Cafe24Shiningstar', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-	--font-heading: 'GmarketSansMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	--breakpoint-xs: 0;
 	--breakpoint-sm: 576px;
 	--breakpoint-md: 768px;
@@ -217,111 +140,12 @@
 	--chakra-sizes-container-xl: 1280px;
 }
 
-:root {
-	--bg_color-start:	#151515;	/* 시작 */
-	--bg_color-end:		#303030;	/* 목표 */
-	--color-com:		#fafafa;
-	--bg-color: 		rgba(36, 36, 36, 0.9);
-	--color-1:			#D8E3EE;
-	--falling-slowly:	20s;
-}
 
-
-
-
-
-html {
-	font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
-	font-family: var(--font-sans);
-	/* background-color: var(--main-bg-color); */
-	text-size-adjust: 100%;
-	/* --vh: 722px; */
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-html::-webkit-scrollbar {
-	display: none; /* Chrome, Safari, Opera*/
-}
-html, html.darkmode {
-	/* background: 	linear-gradient(to bottom, #d5abff, #e2c4ff); */		/* 배경화면을 그라디언트로 할 때 */
-	height:					auto !important;			/* 높이가 무조건 자동으로 늘어나도록 설정 */
-	background:	var(--bg_color-start);
-	
-}
-@media screen and (max-width: 1020px) {
-	html {
-		font-size: 12px;
-	}
-}
-
-
-
-body {
-	/*width: 600px;*/
-	margin: 0 auto;
-	/* background-color: #E4E3E3; */
-}
-
-/*  눈내리자  */
-body, html.darkmode body {
-/**/
-}
-body {
-  overflow-x: hidden;
-}
-
-p {
-  line-height: 1.75;
-  color: white;
-}
-
-a {
-	color: var(--primary-color);
-}
-a:hover {
-	color: darken(var(--primary-color), 10%);
-}
-
-
-.text-primary {
-  color: var(--primary-color) !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  font-family: var(--font-heading);
-  font-size: 2em;
-}
-
-
-p, li {
-	letter-spacing: var(--chakra-letterSpacings-wide);
-	margin: var(--chakra-space-0-5);
-	font-family: 'Pretendard-ExtraLight';
-}
-li {
-	/*margin: 0 0 0 24px;*/
-	text-align: left;
-	color: white;
-}
-ul {
-	display: flex;
-	flex-direction: column;
-	list-style: disc outside;
-	margin: 0 0 24px;
-	padding: var(--chakra-space-2);
-}
-
+/****************************************       Defaults       */
 img {
 	border-style: none;
 }
 img, video {
-	/* max-width: 100%; */
 	height: auto;
 }
 img, svg, video, canvas, audio, iframe, embed, object {
@@ -345,11 +169,205 @@ button, input, optgroup, select, textarea {
 	border-style: solid;
 	box-sizing: border-box;
 }
+body {
+	margin: 0;
+	background-color: var(--body-background);
+	min-height: 100vh; 
+}
 
 
 
 
 
+
+/****************************************       Base      */
+html {
+	font-size: 10px; 
+	font-family: var(--font-sans);
+	background-color: var(--main-bg-color);
+	text-size-adjust: 100%;
+	/* --vh: 722px; */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	background-color: var(--body-background);
+}
+html::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera*/
+}
+html, html.darkmode {		/* 배경화면을 그라디언트로 할 때 */
+	height:					auto !important;			/* 높이가 무조건 자동으로 늘어나도록 설정 */
+}
+@media screen and (max-width: 1020px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+
+/****************************************       Headings      */
+h1, h2, h3, h4, h5, h6 
+{
+  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 2em;
+}
+
+
+/****************************************       Texts       */
+p
+{
+	letter-spacing: var(--chakra-letterSpacings-wide);
+	margin: var(--chakra-space-0-5);
+	font-family: 'Pretendard-ExtraLight';
+}
+ul {
+	display: flex;
+	flex-direction: column;
+	list-style: disc outside;
+	margin: 0 0 24px;
+	padding: var(--chakra-space-2);
+}
+li 
+{
+	margin: var(--chakra-space-0-5);
+	margin-bottom: 1rem;
+	font-family: 'Pretendard-ExtraLight';
+	text-align: left;
+}
+
+/****************************************       Format Strings  */
+formatted-string.sidebar-header-text {
+	font-family: 'GmarketSansMedium';
+	font-size: var(--chakra-fontSizes-5xl);
+}
+formatted-string.introduction-text {
+	color: white;
+    font-family: 'Pretendard-Light';
+    font-size: var(--chakra-fontSizes-2xl);
+    line-height: 2.2rem;
+    word-break: keep-all;
+    letter-spacing: var(--chakra-letterSpacings-wider);
+}
+formatted-string.random-list-title {
+	
+}
+formatted-string.main-list-title {
+	
+}
+formatted-string.category-text {
+	font-family: 'Pretendard-semiBold';
+	font-size: var(--chakra-fontSizes-3xl);
+	margin: 0 12px;
+	white-space: nowrap;
+}
+formatted-string.sort-text {
+	font-family: 'Pretendard-Regular';
+	font-size: var(--chakra-fontSizes-xl);
+	margin: 0 12px;
+	white-space: nowrap;
+}
+formatted-string.genre-text {
+	font-family: 'Pretendard-Regular';
+	font-size: var(--chakra-fontSizes-xl);
+	margin: 0 12px;
+}
+
+
+@media screen and (max-width: 1020px) { 
+	formatted-string.selCategory {
+		font-family: 'Pretendard-Regular';
+		font-size: var(--chakra-fontSizes-sm);
+		margin: 0 2px;
+	}
+	formatted-string.category-text {
+		font-family: 'Pretendard-semiBold';
+		font-size: var(--chakra-fontSizes-md);
+		margin: 0 2px;
+		white-space: nowrap;
+	}
+	formatted-string.sort-text {
+		font-family: 'Pretendard-Regular';
+		font-size: var(--chakra-fontSizes-sm);
+		margin: 0 2px;
+		white-space: nowrap;
+	}
+}
+
+
+/****************************************       Buttons         */
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-width: 32px;
+	color: #030303;
+	--yt-endpoint-hover-color: #030303;
+	background: var(--item-background);
+	color: #fff;
+	border-radius: 8px;
+	border: none;
+	height: 36px;
+	margin: var(--chakra-space-1-5);
+}
+button:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+.clickable {
+	cursor: pointer;
+}
+@media screen and (max-width: 1020px) { 
+	button {
+		height: 24px;
+	}
+}
+
+/****************************************       Button Class     */
+.category-button {
+	line-height: var(--chakra-lineHeights-tall);
+	width: calc( ( var(--chakra-space-96) - 5rem ) / 2);
+	margin: var(--chakra-space-1-5);
+}
+.genre-button {
+	margin: var(--chakra-space-1-5);
+}
+.sort-button {
+	margin: 0;
+	background: none;
+}
+
+/****************************************       Button Selected     */
+.button-selected {
+	color: black;
+	background: white;
+}
+.button-selected:hover {
+	color: black;
+	background: white;
+}
+
+/****************************************       Button Wrapper     */
+.category-select {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.genre-select {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.sort-select {
+	display: flex;
+	border-radius: var(--chakra-radii-2xl);
+	background: rgba(255,255,255,0.1);
+	color: #fff;
+	margin: 0 var(--chakra-space-2);
+}
 
 
 
@@ -357,10 +375,6 @@ button, input, optgroup, select, textarea {
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
-}
-.intro-section-title {
-	font-family: 'GmarketSansMedium';
-	font-size: var(--chakra-fontSizes-5xl);
 }
 .upper {
 	display: none;
@@ -401,10 +415,12 @@ i#menu-icon {
 	color: black;
 }
 
-.left {
+
+/****************************************       Sidebar       */
+.sidebar {
 	width: var(--chakra-sizes-md);
 	height: var(--chakra-sizes-full);
-	background: rgba(0,0,0,.9);
+	background: var(--item-background);
 	color: aliceblue;
 	position: fixed;
 	display: flex;
@@ -417,17 +433,17 @@ i#menu-icon {
 	transform: translateX(0px);
 	transition: transform 0.5s cubic-bezier(.9,-0.3,.1,1.3);
 }
-.left-hide {
+.sidebar-hide {
 	/*display: block !important;*/
 	/*transform: translateX(calc(-1rem - var(--chakra-sizes-md)));*/
 }
 @media screen and (max-width: 1020px) { 
-	.left-hide {
+	.sidebar-hide {
 		/*display: block !important;*/
 		transform: translateX(calc(-1rem - var(--chakra-sizes-md)));
 	}
 }
-.left-head {
+.sidebar-header {
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
@@ -442,20 +458,145 @@ i#menu-icon {
 }
 #profile-pic {
 	border-radius: 50rem;
-	width: 10rem;
+	width: 20rem;
+	aspect-ratio: 1;
+	background-image: var(--profile-img);
+	background-size: cover;
 }
-.left-search {
+.introduction {
+    padding: 2rem;
+    /* margin: 4rem; */
+}
+
+
+
+/****************************************       Random music     */
+.random-music-list {
+	display: flex; 
+	flex-flow: row wrap; 
+	-webkit-box-pack: center; 
+	justify-content: center;
+	padding: var(--chakra-space-4);
+}
+.random-list {
+    margin: var(--chakra-space-4) 0;
+}
+.radom-list-header {
+	margin: 0 var(--chakra-space-2);
+}
+.random-song {
+	background: #202020; 
+	color: white;
+    width: calc( ( var(--ytmusic-content-width) / 6) - 2 * 0.5rem );	margin: var(--chakra-space-2);
+	box-shadow: var(--chakra-shadows-sm);
+	border-radius: var( --chakra-radii-lg);
 	display: flex;
-	margin-inline-start: var(--chakra-space-8);
-	margin-inline-end: var(--chakra-space-8);
-	margin-bottom: var(--chakra-sizes-5);
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
 }
-.left-search-box {
+@media screen and (max-width: 1020px) { 
+	.random-song {
+		width: calc( ( var(--ytmusic-content-width) - 12px) );
+	}
+}
+.random-cover-div {
+	position: relative; 
+	margin: var(--chakra-space-2);
+	aspect-ratio: 1;
+}
+@media screen and (max-width: 1020px) { 
+	.random-cover-div {
+		width: var(--chakra-sizes-24);
+		height: var(--chakra-sizes-24);
+	}
+}
+.random-cover-img {
+	border-radius: var( --chakra-radii-lg);
+	object-fit: cover;
+	overflow: hidden;
+	position: absolute;
 	width: 100%;
+	height: 100%;
+}
+.random-info-div {
+	padding: 0 var(--chakra-space-2) 1rem;
+	width: 100%;
+}
+@media screen and (max-width: 1020px) { 
+	.random-info-div {
+		width:  calc(100% - var(--chakra-sizes-24));
+	}
+}
+.random-song-name {
+	font-family: 'Pretendard-semiBold';
+	font-size: var(--chakra-fontSizes-3xl);
+	letter-spacing: var(--chakra-letterSpacings-wide);
+	display: flex;
+	-webkit-box-pack: justify;
+	place-content: center space-between;
+	margin-top: var(--chakra-space-1);
+	min-height: 50%;
+	font-weight: var(--chakra-fontWeights-semibold);
+}
+.random-artist-name {
+	font-family: 'Pretendard-ExtraLight';
+	font-size: var(--chakra-fontSizes-2xl);
+	display: flex;
+	-webkit-box-pack: justify;
+	place-content: center space-between;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: auto;
+	margin-top: var(--chakra-space-1);
+}
+
+
+/****************************************       Main section     */
+.main-content {
+	display: flex; 
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin-left: var(--chakra-sizes-md);
+	--ytmusic-guide-width: var(--chakra-sizes-md);
+	--ytmusic-content-width: min( calc( 100vw - 200px - var(--ytmusic-guide-width) ), 1248px );
+}
+.main-list {
+    margin: var(--chakra-space-4) 0;
+}
+.main-list-header {
+	margin: 0 var(--chakra-space-2);
+}
+.content-group {
+	/* width: var(--ytmusic-content-width); */
+	margin: 0 auto;
+	font-size: 1.2rem;
+}
+.selector {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.title-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+/******************************     Search box     */
+.search-box {
 	display: flex;
 	position: relative;
+	margin: 0 var(--chakra-space-2);
 }
-.left-search-icon {
+.search-icon {
 	left: 0px;
 	width: var(--chakra-sizes-10);
 	height: var(--chakra-sizes-10);
@@ -470,7 +611,7 @@ i#menu-icon {
 	z-index: 2;
 	pointer-events: none;
 }
-.left-search-text {
+.search-text {
 	width: 100%;
 	min-width: 0px;
 	outline: transparent solid 2px;
@@ -490,165 +631,16 @@ i#menu-icon {
 	border-color: inherit;
 	background: inherit;
 }
-.left-text {
-	margin-inline-start: var(--chakra-space-8);
-	margin-inline-end: var(--chakra-space-8);
+
+
+genre.genre-list {
+    width: 100%;
 }
 
 
 
-
-
-
-
-
-/**********       Buttons        ***********/
-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
-	min-width: 32px;
-	border: 1px solid rgba(255,255,255,0.1);
-	color: #030303;
-	--yt-endpoint-hover-color: #030303;
-	background: rgba(255,255,255,0.1);
-	color: #fff;
-	border-radius: 8px;
-	border: none;
-	height: 36px;
-	margin: var(--chakra-space-1-5);
-}
-button:hover {
-	background-color: rgba(255,255,255,0.2);
-}
-.clickable {
-	cursor: pointer;
-}
-@media screen and (max-width: 1020px) { 
-	button {
-		height: 24px;
-	}
-}
-
-.category-button {
-	line-height: var(--chakra-lineHeights-tall);
-	height: var(--chakra-lineHeights-tall);
-	margin-top: 0.3rem;
-	width: calc( ( var(--chakra-space-96) - 5rem ) / 2);
-	margin: var(--chakra-space-1-5);
-}
-.genre-button {
-	margin: var(--chakra-space-1-5);
-}
-.sort-button {
-	margin: 0;
-	background: none;
-}
-
-/**********   Button Texts    ***********/
-.selCategory {
-	font-family: 'Pretendard-Regular';
-	font-size: var(--chakra-fontSizes-xl);
-	margin: 0 12px;
-}
-.selGenre {
-	font-family: 'Pretendard-semiBold';
-	font-size: var(--chakra-fontSizes-2xl);
-	margin: 0 12px;
-	white-space: nowrap;
-}
-.selSort {
-	font-family: 'Pretendard-Regular';
-	font-size: var(--chakra-fontSizes-xl);
-	margin: 0 12px;
-	white-space: nowrap;
-}
-@media screen and (max-width: 1020px) { 
-	.selCategory {
-		font-family: 'Pretendard-Regular';
-		font-size: var(--chakra-fontSizes-sm);
-		margin: 0 2px;
-	}
-	.selGenre {
-		font-family: 'Pretendard-semiBold';
-		font-size: var(--chakra-fontSizes-md);
-		margin: 0 2px;
-		white-space: nowrap;
-	}
-	.selSort {
-		font-family: 'Pretendard-Regular';
-		font-size: var(--chakra-fontSizes-sm);
-		margin: 0 2px;
-		white-space: nowrap;
-	}
-}
-/* Button Selected */
-.button-selected {
-	color: black;
-	background: white;
-}
-.button-selected:hover {
-	color: black;
-	background: white;
-}
-
-/**********     Button Wrapper       ***********/
-.category-select {
-	display: flex;
-	-webkit-box-align: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	margin: var(--chakra-sizes-3);
-}
-.genre-select {
-	display: flex;
-}
-.sort-select {
-	display: flex;
-	border-radius: var(--chakra-radii-2xl);
-	background: rgba(255,255,255,0.1);
-	color: #fff;
-}
-
-
-
-
-
-
-.main-content {
-	display: flex; 
-	flex-direction: column;
-	flex-wrap: nowrap;
-	margin-left: var(--chakra-sizes-md);
-	--ytmusic-guide-width: var(--chakra-sizes-md);
-	--ytmusic-content-width: min( calc( 100vw - 200px - var(--ytmusic-guide-width) ), 1478px );
-}
-.intro-content {
-	color: white;
-	font-family: 'Pretendard-Light';
-	font-size: var(--chakra-fontSizes-xl);
-	line-height: 1.6rem;
-}
-.intro-section {
-	width: calc(var(--chakra-sizes-96) - 5rem);
-}
-.content-group {
-	width: var(--ytmusic-content-width);
-	margin: 0 auto;
-	font-size: 1.2rem;
-}
-.selector {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-content: center;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-}
+/****************************************       Main : Random        */
+/****************************************       Main : All           */
 
 
 
@@ -670,17 +662,19 @@ button:hover {
 	}
 }
 .music-list {
-	display: flex; 
-	flex-flow: row wrap; 
-	-webkit-box-pack: center; 
-	justify-content: center;
-	margin-left: 0px;
-	padding: var(--chakra-space-4);
+	display: flex;
+    flex-flow: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 0px;
+    /* padding: var(--chakra-space-4); */
+    width: var(--ytmusic-content-width);
+    margin: 0 auto;
 }
 .song-div {
-	background: #202020; 
+	background: var(--item-background); 
 	color: white;
-	width: calc( ( var(--ytmusic-content-width) ) / 3 );
+	width: calc( ( var(--ytmusic-content-width) / 3) - 2 * 0.5rem );
 	margin: var(--chakra-space-2);
 	box-shadow: var(--chakra-shadows-sm);
 	border-radius: var( --chakra-radii-lg);
@@ -773,15 +767,6 @@ button:hover {
 		border-bottom-width: 1px;
 		border-bottom-color: var(--chakra-colors-gray-200);
 	}
-	.left {
-		
-	}
-	.song-div {
-		
-	}
-	.album-cover-img {
-		 
-	}
 	.main-content {
 		margin-left: 0;
 		--ytmusic-guide-width: 0px;
@@ -789,33 +774,6 @@ button:hover {
 	}
 }
 
-
-:root {
-	--vh: 100vh;
-}
-
-html, body, #main {
-	height: 100%;
-	min-height: var(--vh);
-}
-
-#image-grid-wrapper img:hover {
-	border: 4px solid purple;
-}
-
-#image-grid-wrapper img {
-	cursor: pointer;
-}
-
-#sortable-wrapper {
-	display: contents;
-}
-.handle {
-	cursor: pointer;
-}
-.sortable-ghost {
-	background-color: rgba(0,0,255,0.1);
-}
 
 
 /*

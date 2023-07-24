@@ -6,86 +6,77 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="description" content="누군가의 노래책">
 		<title>노래책</title>
+		<link href="styles/fonts.css" rel="stylesheet" type="text/css">
+		<link href="styles/parameters.css" rel="stylesheet" type="text/css">
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>    
 	</head>
 
 	<body>
 		<div>
-			<div class="left" id="id-left">
-				<div class="left-head">
-					<img src="https://image.bugsm.co.kr/album/images/500/40734/4073469.jpg" id="profile-pic"> </img>
-					<div class="header-gruop">
-						<h1 class="intro-section-header">
-							<formatted-string class="intro-section-title">
-								누군가의 노래책
-							</formatted-string>
-						</h1>
-					</div>
-				</div>
+			<!----------------------------------- 좌측 사이드바 -->
+			<div class="sidebar">
 
-				<div class="left-search">
-					<div class="left-search-box">
-						<div class="left-search-icon">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</div>
-						<input type="text" id="inputsearch" onkeydown="searchEnter();" oninput="searchUpdate();" placeholder="Search" class="left-search-text">
-					</div>
-				</div>
-
-				<category class="category-list">
-							
-				</category>
-
-				<div class="intro-section">
-				
-						<formatted-string class="intro-content">
-							채팅, 후원, 채널포인트 등 확인 가능한 방법으로 "가수 - 제목" 함께 보내주세요.
+				<!----------------------------------- 사이드바 상단 -->
+				<div class="sidebar-header">
+					<img id="profile-pic"> </img>
+					<h1 class="sidebar-header-content">
+						<formatted-string class="sidebar-header-text">
+							달토리의 노래책
 						</formatted-string>
-						<ul>
-							<li>
-								<formatted-string class="intro-content">
-									노래 신청은 500 포인트 또는 3000원 미션 후원 또는 후원으로 신청 부탁 드릴게요!
-								</formatted-string>
-							</li>
-							<li>
-								<formatted-string class="intro-content">
-									팔로우를 하시면 한 곡은 무료로 불러 드립니다! (무료곡만 가능 포인트 보상에서 선택)  
-								</formatted-string>
-							</li>
-							<li>
-								<formatted-string class="intro-content">
-									노래책을 확인하지 않고 신청 할 시 채널포인트 환불이 불가능합니다.  
-								</formatted-string>
-							</li>
-							<li>
-								<formatted-string class="intro-content">
-									부른 노래 재신청은 5000원입니다.  
-								</formatted-string>
-							</li>
-							<li>
-								<formatted-string class="intro-content">
-									까먹고 못 적은 노래가 있을 수 있으니 노래책에 없는 노래를 신청하고 싶으시다면 한 번 물어 봐주세요.  
-								</formatted-string>
-							</li>
-							<li>
-								<formatted-string class="intro-content">
-									유료곡, 부른 노래 재신청은 미션후원으로 부탁 드릴게요.  
-								</formatted-string>
-							</li>
-							<li>
-								<formatted-string class="intro-content">
-									목 컨디션에 따라서 부르기 어렵다고 생각하는 노래는 거절 할 수도 있습니다.  
-								</formatted-string>
-							</li>
-						</ul>
+					</h1>
+				</div>
+
+				<!----------------------------------- 설명 -->
+				<div class="introduction">
+					<formatted-string class="introduction-text">
+						채팅, 후원, 채널포인트 등 확인 가능한 방법으로 "가수 - 제목" 함께 보내주세요.
+					</formatted-string>
+					<ul>
+						<li>
+							<formatted-string class="introduction-text">
+								노래 신청은 500 포인트 또는 3000원 미션 후원 또는 후원으로 신청 부탁 드릴게요!
+							</formatted-string>
+						</li>
+						<li>
+							<formatted-string class="introduction-text">
+								팔로우를 하시면 한 곡은 무료로 불러 드립니다! (무료곡만 가능 포인트 보상에서 선택)  
+							</formatted-string>
+						</li>
+						<li>
+							<formatted-string class="introduction-text">
+								노래책을 확인하지 않고 신청 할 시 채널포인트 환불이 불가능합니다.  
+							</formatted-string>
+						</li>
+						<li>
+							<formatted-string class="introduction-text">
+								부른 노래 재신청은 5000원입니다.  
+							</formatted-string>
+						</li>
+						<li>
+							<formatted-string class="introduction-text">
+								까먹고 못 적은 노래가 있을 수 있으니 노래책에 없는 노래를 신청하고 싶으시다면 한 번 물어 봐주세요.  
+							</formatted-string>
+						</li>
+						<li>
+							<formatted-string class="introduction-text">
+								유료곡, 부른 노래 재신청은 미션후원으로 부탁 드릴게요.  
+							</formatted-string>
+						</li>
+						<li>
+							<formatted-string class="introduction-text">
+								목 컨디션에 따라서 부르기 어렵다고 생각하는 노래는 거절 할 수도 있습니다.  
+							</formatted-string>
+						</li>
+					</ul>
 				</div>
 			</div>
 
+			<!----------------------------------- 모바일 상단바 -->
 			<div class="upper">
 				<div class="upper-head">
 					<h1>
-						노래책 β
+					달토리의 노래책
 					</h1>
 				</div>
 				<button type="button" class="menu-button" id="openMenu">
@@ -93,72 +84,83 @@
 				</button>
 			</div>
 
+
+			<!----------------------------------- 본문 -->
 			<div class="main-content" id="mainContent">
 			
-				
-
-
+				<!----------------------------------- 랜덤 -->
 				<div class="random-list">
+					<!----------------------------------- 헤더 -->
 					<div class="header-gruop">
-
-						<h1 class="radom-list-header">
+						<h2 class="radom-list-header">
 							<formatted-string class="random-list-title">
 								랜덤 리스트
 							</formatted-string>
-						</h1>
-
+						</h2>
 					</div>
+					<!----------------------------------- 본문 -->
 					<div class="content-group">
-						<radom-music class="music-list">
-						</radom-music>
+						<random class="random-music-list" id="RND">
+						</random>
 					</div>
 				</div>
 
+				<!----------------------------------- 모든 노래, 검색 결과 -->
 				<div class="main-list">
-
+					<!----------------------------------- 헤더 -->
 					<div class="header-gruop">
+						<div class="title-group">
+							<!----------------------------------- 헤더 텍스트 -->
+							<h2 class="main-list-header">
+								<formatted-string class="main-list-title">
+									모든 노래
+								</formatted-string>
+							</h2>
+							<!----------------------------------- 검색 영역 -->
+							<div class="search-box">
+								<div class="search-icon">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</div>
+								<input type="text" id="inputsearch" onkeydown="searchEnter();" oninput="searchUpdate();" placeholder="Search" class="search-text">
+							</div>
+						</div>	
 
-						<h1 class="main-list-header">
-							<formatted-string class="main-list-title">
-								전체 리스트
-							</formatted-string>
-						</h1>
-						
+						<!----------------------------------- 헤더 분류 선택자 -->
 						<div class="selector">
-
-							<div class="genre-select">
-								<button type="button" class="genre-button clickable">
-									<formatted-string class="selGenre">
+							<!----------------------------------- 대분류 선택자 -->
+							<div class="category-select">
+								<button type="button" class="category-button clickable">
+									<formatted-string class="category-text">
 										KPOP
 									</formatted-string>
 								</button>
-								<button type="button" class="genre-button clickable">
-									<formatted-string class="selGenre">
+								<button type="button" class="category-button clickable">
+									<formatted-string class="category-text">
 										JPOP
 									</formatted-string>
 								</button>
-								<button type="button" class="genre-button clickable">
-									<formatted-string class="selGenre">
+								<button type="button" class="category-button clickable">
+									<formatted-string class="category-text">
 										POP
 									</formatted-string>
 								</button>
 							</div>
-
+							<!----------------------------------- 정렬 선택자 -->
 							<div class="sort-select">
 								<button type="button" class="sort-button clickable" id="bySinger" onclick="sortSinger();" >
-									<formatted-string class="selSort">
+									<formatted-string class="sort-text">
 										가수명순
 										<i class="fa-solid fa-arrow-down-short-wide"></i>
 									</formatted-string>
 								</button>
 								<button type="button" class="sort-button clickable" id="bySong" onclick="sortSong();">
-									<formatted-string class="selSort">
+									<formatted-string class="sort-text">
 										곡명순
 										<i class="fa-solid fa-arrow-down-short-wide"></i>
 									</formatted-string>
 								</button>
 								<button type="button" class="sort-button clickable button-selected" id="byAdd" onclick="sortAdded();">
-									<formatted-string class="selSort">
+									<formatted-string class="sort-text">
 										등록순
 										<i class="fa-solid fa-arrow-down-short-wide"></i>
 									</formatted-string>
@@ -166,18 +168,22 @@
 							</div>
 						</div>
 						
-						
-		
-						<div class="left-text">
+						<!----------------------------------- 헤더 분류 선택자 -->
+						<div class="selector">
 							
-						</div>
-		
-						
+							<!----------------------------------- 장르 목록 -->
+							<genre class="genre-list">
+							</genre>
+						</div>	
 					</div>
+					<!----------------------------------- End - 헤더 -->
 
+					<!----------------------------------- 노래 목록 -->
 					<section class="music-list" id="musicList">
 					</section>
+
 				</div>
+				<!----------------------------------- End - 모든 노래, 검색 결과 -->
 
 			</div>
 
