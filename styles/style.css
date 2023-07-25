@@ -836,6 +836,7 @@ genre.genre-list {
 	}
 	.main-content {
 		margin-left: 0;
+		margin-top: var(--chakra-space-20);
 		--ytmusic-guide-width: 0px;
 		--ytmusic-content-width: calc(100vw - 32px - var(--ytmusic-guide-width));
 	}
