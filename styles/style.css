@@ -829,7 +829,7 @@ genre.genre-list {
 		color: aliceblue;
 		border-bottom-width: 1px;
 		border-bottom-color: var(--chakra-colors-gray-200);
-		position: absolute;
+		position: fixed;
 		top: 0;
 		z-index: 5;
 		width: 100%;
