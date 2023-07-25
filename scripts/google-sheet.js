@@ -10,7 +10,7 @@ let noCover = `https://i.namu.wiki/i/66evJzSR1h2ooOwjrx9RPaxSnWRvSsecGuzmXAymJ5R
 
 var musicbook;
 var addOrdered;
-var singerOrdered;
+var artistOrdered;
 var songOrdered;
 
 var category_selected;
@@ -44,9 +44,9 @@ google.charts.load("current", { packages: ["corechart"] }).then(() => {
 			});
 			return newRow;
 		});
-		console.log("init\n", musicbook);
+
 		addOrdered = JSON.parse(JSON.stringify(musicbook));
-		console.log("add\n", addOrdered);
+
 		musicbook.sort((a, b) => {
 			a = a.song.toLowerCase();
 			b = b.song.toLowerCase();
@@ -64,8 +64,8 @@ google.charts.load("current", { packages: ["corechart"] }).then(() => {
 			if (a < b) return -1;
 			return 0;
 		});
-		singerOrdered = JSON.parse(JSON.stringify(musicbook));
-		// console.log("singer Ordered\n", singerOrdered);
+		artistOrdered = JSON.parse(JSON.stringify(musicbook));
+		// console.log("artist Ordered\n", artistOrdered);
 
 		category_populate(musicbook);
 		genre_populate(musicbook);
@@ -95,14 +95,10 @@ function genre_populate(jsonObj) {
 		cateName.appendChild(cateString);
 
 		cateName.classList.add("genre-button");
+		cateName.classList.add("clickable");
 		cateName.setAttribute("id", "genre-" + i);
 
-		cateDiv.appendChild(cateName);
-	}
-
-	var prev_sel = document.getElementsByClassName("genre-button");
-	for (var i = 0; i < prev_sel.length; i++) {
-		prev_sel.item(i).addEventListener('click', function () {
+		cateName.addEventListener('click', function () {
 			var prev_sel = document.getElementsByClassName("genre-button");
 			if ( this.classList.contains("button-selected") ) {
 				for( var i = 0; i < prev_sel.length; i++ ){
@@ -121,6 +117,7 @@ function genre_populate(jsonObj) {
 			}
 		});
 
+		cateDiv.appendChild(cateName);
 	}
 }
 
@@ -143,14 +140,10 @@ function category_populate(jsonObj) {
 		cateName.appendChild(cateString);
 
 		cateName.classList.add("category-button");
+		cateName.classList.add("clickable");
 		cateName.setAttribute("id", "category-" + i);
 
-		cateDiv.appendChild(cateName);
-	}
-
-	var prev_sel = document.getElementsByClassName("category-button");
-	for (var i = 0; i < prev_sel.length; i++) {
-		prev_sel.item(i).addEventListener('click', function () {
+		cateName.addEventListener('click', function () {
 			var prev_sel = document.getElementsByClassName("category-button");
 			if ( this.classList.contains("button-selected") ) {
 				for( var i = 0; i < prev_sel.length; i++ ){
@@ -169,6 +162,7 @@ function category_populate(jsonObj) {
 			}
 		});
 
+		cateDiv.appendChild(cateName);
 	}
 }
 
@@ -212,7 +206,7 @@ function random_select(jsonObj, num) {
 
 		var infoDiv = document.createElement('div');
 		var infoSong = document.createElement('formatted-string');
-		var infoSinger = document.createElement('formatted-string');
+		var infoArtist = document.createElement('formatted-string');
 
 		myDiv.classList.add("random-song");
 		
@@ -222,16 +216,26 @@ function random_select(jsonObj, num) {
 		else coverImg.src = musiclist[rnd].cover_link;
 
 		infoDiv.classList.add("random-info-div");
-		infoSinger.classList.add("random-artist-name");
+		infoArtist.classList.add("random-artist-name");
 		infoSong.classList.add("random-song-name");
-		infoSinger.textContent = musiclist[rnd].artist;
+		infoArtist.textContent = musiclist[rnd].artist;
 		infoSong.textContent = musiclist[rnd].song;
 
 		coverDiv.appendChild(coverImg);
 		infoDiv.appendChild(infoSong);
-		infoDiv.appendChild(infoSinger);
+		infoDiv.appendChild(infoArtist);
 		myDiv.appendChild(coverDiv);
 		myDiv.appendChild(infoDiv);
+
+		myDiv.classList.add("clickable");
+		myDiv.addEventListener('click', function () {
+			var song = this.childNodes[1].childNodes[0];
+			var artist = this.childNodes[1].childNodes[1];
+			var text = song.textContent + " - " + artist.textContent;
+			window.navigator.clipboard.writeText(text).then(() => {
+				toast("복사완료");
+			});
+		});
 		
 		random.appendChild(myDiv);
 	}
@@ -269,7 +273,6 @@ function populateSection(jsonObj, direction) {
 			}
 		}
 		if ( (category_selected != "") && (musiclist[i].category != category_selected) ) {
-			console.log("category_sel :", category_selected);
 			continue;
 		}
 		if ( (genre_selected != "") && (musiclist[i].genre != genre_selected) ) {
@@ -283,7 +286,7 @@ function populateSection(jsonObj, direction) {
 
 		var infoDiv = document.createElement('div');
 		var infoSong = document.createElement('formatted-string');
-		var infoSinger = document.createElement('formatted-string');
+		var infoArtist = document.createElement('formatted-string');
 
 		myDiv.classList.add("song-div");
 		
@@ -293,16 +296,26 @@ function populateSection(jsonObj, direction) {
 		else coverImg.src = musiclist[i].cover_link;
 
 		infoDiv.classList.add("info-div");
-		infoSinger.classList.add("singer-name");
+		infoArtist.classList.add("artist-name");
 		infoSong.classList.add("song-name");
-		infoSinger.textContent = musiclist[i].artist;
+		infoArtist.textContent = musiclist[i].artist;
 		infoSong.textContent = musiclist[i].song;
 
 		coverDiv.appendChild(coverImg);
 		infoDiv.appendChild(infoSong);
-		infoDiv.appendChild(infoSinger);
+		infoDiv.appendChild(infoArtist);
 		myDiv.appendChild(coverDiv);
 		myDiv.appendChild(infoDiv);
+
+		myDiv.classList.add("clickable");
+		myDiv.addEventListener('click', function () {
+			var song = this.childNodes[1].childNodes[0];
+			var artist = this.childNodes[1].childNodes[1];
+			var text = song.textContent + " - " + artist.textContent;
+			window.navigator.clipboard.writeText(text).then(() => {
+				toast("복사완료");
+			});
+		});
 
 		section.appendChild(myDiv);
 	}

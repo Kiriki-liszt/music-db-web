@@ -269,27 +269,27 @@ formatted-string.sort-text {
 formatted-string.genre-text {
 	font-family: 'Pretendard-Regular';
 	font-size: var(--chakra-fontSizes-xl);
-	margin: 0 12px;
+	margin: 3px 12px;
 }
 
 
 @media screen and (max-width: 1020px) { 
-	formatted-string.selCategory {
-		font-family: 'Pretendard-Regular';
-		font-size: var(--chakra-fontSizes-sm);
-		margin: 0 2px;
-	}
 	formatted-string.category-text {
 		font-family: 'Pretendard-semiBold';
 		font-size: var(--chakra-fontSizes-md);
-		margin: 0 2px;
+		margin: 0 6px;
 		white-space: nowrap;
 	}
 	formatted-string.sort-text {
 		font-family: 'Pretendard-Regular';
-		font-size: var(--chakra-fontSizes-sm);
-		margin: 0 2px;
+		font-size: var(--chakra-fontSizes-xs);
+		margin: 0 5px;
 		white-space: nowrap;
+	}
+	formatted-string.genre-text {
+		font-family: 'Pretendard-Regular';
+		font-size: var(--chakra-fontSizes-sm);
+		margin: 3px 6px;
 	}
 }
 
@@ -325,11 +325,11 @@ button:hover {
 /****************************************       Button Class     */
 .category-button {
 	line-height: var(--chakra-lineHeights-tall);
-	width: calc( ( var(--chakra-space-96) - 5rem ) / 2);
 	margin: var(--chakra-space-1-5);
 }
 .genre-button {
 	margin: var(--chakra-space-1-5);
+	height: auto;
 }
 .sort-button {
 	margin: 0;
@@ -416,6 +416,30 @@ i#menu-icon {
 }
 
 
+#toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    padding: 15px 20px;
+    transform: translate(-50%, 10px);
+    border-radius: 30px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s, transform .5s;
+    background: rgba(255, 255, 255, 0.815);
+    color: #000000;
+    z-index: 10000;
+	font-family: 'Pretendard-semiBold';
+	font-size: var(--chakra-fontSizes-2xl);
+}
+
+#toast.reveal {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0)
+}
+
 /****************************************       Sidebar       */
 .sidebar {
 	width: var(--chakra-sizes-md);
@@ -433,11 +457,12 @@ i#menu-icon {
 	transform: translateX(0px);
 	transition: transform 0.5s cubic-bezier(.9,-0.3,.1,1.3);
 }
-.sidebar-hide {
-	/*display: block !important;*/
-	/*transform: translateX(calc(-1rem - var(--chakra-sizes-md)));*/
-}
+
 @media screen and (max-width: 1020px) { 
+	.sidebar {
+		width: 100vw;
+		margin-top: var(--chakra-sizes-20);
+	}
 	.sidebar-hide {
 		/*display: block !important;*/
 		transform: translateX(calc(-1rem - var(--chakra-sizes-md)));
@@ -497,19 +522,13 @@ i#menu-icon {
 }
 @media screen and (max-width: 1020px) { 
 	.random-song {
-		width: calc( ( var(--ytmusic-content-width) - 12px) );
+		width: calc( ( var(--ytmusic-content-width) / 3) - 2 * 0.5rem );
 	}
 }
 .random-cover-div {
 	position: relative; 
 	margin: var(--chakra-space-2);
 	aspect-ratio: 1;
-}
-@media screen and (max-width: 1020px) { 
-	.random-cover-div {
-		width: var(--chakra-sizes-24);
-		height: var(--chakra-sizes-24);
-	}
 }
 .random-cover-img {
 	border-radius: var( --chakra-radii-lg);
@@ -523,11 +542,6 @@ i#menu-icon {
 	padding: 0 var(--chakra-space-2) 1rem;
 	width: 100%;
 }
-@media screen and (max-width: 1020px) { 
-	.random-info-div {
-		width:  calc(100% - var(--chakra-sizes-24));
-	}
-}
 .random-song-name {
 	font-family: 'Pretendard-semiBold';
 	font-size: var(--chakra-fontSizes-3xl);
@@ -539,6 +553,12 @@ i#menu-icon {
 	min-height: 50%;
 	font-weight: var(--chakra-fontWeights-semibold);
 	word-break: break-word;
+}
+@media screen and (max-width: 1020px) { 
+	.random-song-name {
+		font-family: 'Pretendard-semiBold';
+		font-size: var(--chakra-fontSizes-2xl);
+	}
 }
 .random-artist-name {
 	font-family: 'Pretendard-ExtraLight';
@@ -738,7 +758,7 @@ genre.genre-list {
 	font-weight: var(--chakra-fontWeights-semibold);
 	word-break: break-word;
 }
-.singer-name{
+.artist-name{
 	font-family: 'Pretendard-ExtraLight';
 	font-size: var(--chakra-fontSizes-2xl);
 	display: flex;
