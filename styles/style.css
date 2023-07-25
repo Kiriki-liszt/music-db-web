@@ -565,6 +565,7 @@ i#menu-icon {
 .random-cover-div {
 	position: relative; 
 	margin: var(--chakra-space-2);
+	width: calc(100% - 2 * var(--chakra-space-2));
 	aspect-ratio: 1;
 }
 .random-cover-img {
