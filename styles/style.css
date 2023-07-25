@@ -655,6 +655,7 @@ i#menu-icon {
 	display: flex;
 	position: relative;
 	margin: 0 var(--chakra-space-2);
+	max-width: 40%;
 }
 .search-icon {
 	left: 0px;
@@ -781,7 +782,7 @@ genre.genre-list {
 }
 .song-name {
 	font-family: 'Pretendard-semiBold';
-	font-size: var(--chakra-fontSizes-3xl);
+	font-size: var(--chakra-fontSizes-2xl);
 	letter-spacing: var(--chakra-letterSpacings-wide);
 	/*line-height: 1.5rem;
 	overflow: hidden;
